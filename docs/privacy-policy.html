@@ -21,14 +21,22 @@
   .logo .x{color:var(--gold)}
   h1{font-size:26px;margin:20px 0 4px;font-weight:700}
   h2{font-size:18px;color:var(--gold);margin:34px 0 12px;font-weight:600}
+  h3{font-size:15px;color:var(--text);margin:22px 0 8px;font-weight:600}
   p,li{color:var(--text);margin-bottom:12px}
   ul{padding-left:22px;margin-bottom:16px}
   li{margin-bottom:8px}
   strong{color:#fff}
+  code{background:var(--surface);padding:1px 5px;border-radius:4px;font-size:13px}
   .updated{color:var(--muted);font-size:14px;margin-top:6px}
   a{color:var(--gold);text-decoration:none}
   a:hover{text-decoration:underline}
   .back{display:inline-block;margin-bottom:8px;color:var(--muted);font-size:14px}
+  .callout{background:var(--surface);border-left:3px solid var(--gold);padding:16px 18px;margin:18px 0;border-radius:0 6px 6px 0}
+  .callout p:last-child{margin-bottom:0}
+  .tabla{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;display:block;overflow-x:auto}
+  .tabla th,.tabla td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top}
+  .tabla th{color:var(--gold);font-weight:600;white-space:nowrap}
+  .tabla code{font-size:12px}
   footer{border-top:1px solid var(--border);margin-top:48px;padding-top:24px;color:var(--muted);font-size:14px}
   @media(max-width:600px){.container{padding:32px 18px 60px}h1{font-size:22px}}
 </style>
@@ -41,89 +49,260 @@
 
   <a class="back" href="index.html">← Inicio</a>
   <h1>Política de Privacidad</h1>
-  <p class="updated">Última actualización: 19 de junio de 2026</p>
+  <p class="updated">Última actualización: 15 de agosto de 2026</p>
 
-  <h2>1. Introducción</h2>
+  <h2>1. Lo esencial</h2>
   <p>
-    Cifrax es un navegador para Android centrado en la privacidad real. Esta política
-    explica qué datos maneja la aplicación y cómo se protegen. La privacidad es el núcleo
-    del producto: <strong>Cifrax no recopila datos personales ni los envía a servidores
-    propios</strong>.
+    Cifrax es un navegador para Android centrado en la privacidad. <strong>No tenemos servidores
+    propios.</strong> No recopilamos datos personales, no usamos analíticas ni herramientas de
+    medición, no incluimos publicidad ni rastreadores, y no accedemos al identificador de
+    publicidad del dispositivo. Nada de lo que hagas en Cifrax se nos envía, porque no hay ningún
+    sitio al que enviarlo.
+  </p>
+  <p>
+    Esta política describe con precisión qué se guarda en tu dispositivo, qué conexiones de red
+    hace la aplicación y qué servicios de terceros intervienen. Está redactada para poder
+    contrastarse línea por línea con el código de la app.
   </p>
 
-  <h2>2. Datos que NO recopilamos</h2>
+  <h2>2. Datos que se guardan en tu dispositivo</h2>
   <p>
-    No recopilamos, transmitimos ni almacenamos en servidores externos ningún dato personal,
-    historial de navegación, descargas, ni identificadores. No usamos analíticas de terceros
-    ni rastreadores publicitarios.
+    Toda tu configuración se guarda <strong>únicamente en el dispositivo</strong>, cifrada con
+    <strong>AES-256</strong> mediante <strong>Android Keystore</strong>. Esta información no sale
+    nunca del móvil y nosotros no tenemos forma de acceder a ella:
+  </p>
+  <ul>
+    <li>Tus <strong>marcadores</strong>, con el nombre y la imagen que les hayas puesto.</li>
+    <li>Los <strong>ajustes</strong> de privacidad, navegación, descargas e idioma.</li>
+    <li>El <strong>PIN de acceso</strong> y el <strong>PIN señuelo</strong>, guardados siempre
+      como hash con sal (nunca en texto legible, ni siquiera cifrado y reversible).</li>
+    <li>Las <strong>pestañas abiertas</strong>, solo si has desactivado «Borrar al cerrar».</li>
+    <li>La fecha de la <strong>última comprobación de tu suscripción</strong> (ver apartado 6).</li>
+  </ul>
+  <p>
+    El historial de navegación, las cookies y los datos de los sitios los gestiona el motor
+    WebView del sistema en el almacenamiento privado de la app. Con el ajuste «Borrar al cerrar»
+    activado (valor por defecto) se eliminan al salir.
   </p>
 
-  <h2>3. Almacenamiento local y cifrado</h2>
+  <h2>3. Permisos de la aplicación</h2>
+  <p>Cifrax declara estos permisos y ningún otro. No pide acceso a contactos, ubicación,
+    micrófono, cámara, llamadas ni SMS.</p>
+
+  <table class="tabla">
+    <tr><th>Permiso</th><th>Para qué se usa</th></tr>
+    <tr>
+      <td><code>INTERNET</code></td>
+      <td>Cargar las páginas web y descargar el contenido que tú pides. Sin él la app no funciona.</td>
+    </tr>
+    <tr>
+      <td><code>ACCESS_NETWORK_STATE</code></td>
+      <td>Saber si hay conexión antes de intentar una descarga o una comprobación.</td>
+    </tr>
+    <tr>
+      <td><code>USE_BIOMETRIC</code></td>
+      <td>Desbloquear la app con tu huella. La huella la valida Android; la app solo recibe un «sí» o un «no» y nunca ve tus datos biométricos.</td>
+    </tr>
+    <tr>
+      <td><code>com.android.vending.BILLING</code></td>
+      <td>Gestionar la suscripción a través de Google Play.</td>
+    </tr>
+    <tr>
+      <td><code>FOREGROUND_SERVICE</code><br><code>FOREGROUND_SERVICE_DATA_SYNC</code></td>
+      <td>Mantener viva la descarga cuando sales de la app o bloqueas la pantalla, para que no se corte a medias.</td>
+    </tr>
+    <tr>
+      <td><code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td>
+      <td>Seguir reproduciendo el audio con la pantalla bloqueada. Solo se usa si activas «Reproducción en segundo plano», que viene desactivada.</td>
+    </tr>
+    <tr>
+      <td><code>POST_NOTIFICATIONS</code></td>
+      <td>Mostrar el progreso de las descargas y los controles de reproducción.</td>
+    </tr>
+    <tr>
+      <td><code>WAKE_LOCK</code></td>
+      <td>Evitar que el sistema duerma el proceso en mitad de una descarga.</td>
+    </tr>
+    <tr>
+      <td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
+      <td>Poder pedirte (nunca concederse solo) una excepción de ahorro de batería, porque algunos fabricantes congelan las descargas al bloquear la pantalla. Puedes decir que no.</td>
+    </tr>
+    <tr>
+      <td><code>WRITE_EXTERNAL_STORAGE</code><br>(solo Android 9 y anteriores)</td>
+      <td>Guardar los archivos descargados. En versiones modernas de Android no se solicita.</td>
+    </tr>
+    <tr>
+      <td><code>READ_EXTERNAL_STORAGE</code><br>(solo Android 12 y anteriores)</td>
+      <td>Leer los archivos que has descargado con la app. En versiones modernas de Android no se solicita.</td>
+    </tr>
+  </table>
+
   <p>
-    Toda la configuración y los datos sensibles (como el PIN de acceso o el estado de la
-    suscripción) se guardan <strong>únicamente en tu dispositivo</strong>, cifrados con
-    <strong>AES-256</strong> mediante <strong>Android Keystore</strong>. Los PIN se almacenan
-    siempre como hash, nunca en texto plano. Esta información no sale nunca del dispositivo.
+    Para elegir la imagen de un marcador se usa el <strong>selector de fotos del sistema</strong>,
+    que <strong>no requiere permiso de almacenamiento</strong>: tú eliges una imagen concreta y la
+    app solo recibe esa. No tiene acceso al resto de tu galería.
   </p>
 
-  <h2>4. Servicios de terceros</h2>
+  <h2>4. Servicios de Google integrados</h2>
   <p>
-    Cifrax integra dos servicios de Google, necesarios para su funcionamiento, gestionados
-    directamente por Google y sujetos a la
+    Cifrax integra cuatro componentes de Google. Los gestiona Google y están sujetos a su
     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de
-    Privacidad de Google</a>:
+    Privacidad</a>. Esto es exactamente lo que hace cada uno:
   </p>
+
+  <h3>Google Play Billing — suscripción</h3>
+  <p>
+    Procesa el pago. La compra y la cuenta las gestiona Google: <strong>Cifrax no ve ni recibe tus
+    datos bancarios</strong>. La app solo consulta a Google si tu suscripción está activa y recibe
+    un sí o un no.
+  </p>
+
+  <h3>Google Play Integrity — antifraude</h3>
+  <p>
+    Verifica que la app y el dispositivo no estén manipulados, para protegernos de copias
+    modificadas. Para emitir ese veredicto, <strong>Google recibe identificadores del dispositivo
+    y de la aplicación</strong>. Es el único componente que transmite identificadores, y lo hace
+    contra Google, no contra nosotros: no recibimos ni almacenamos ninguno.
+  </p>
+
+  <h3>ML Kit — traductor de páginas</h3>
+  <div class="callout">
+    <p>
+      <strong>La traducción ocurre entera dentro de tu dispositivo.</strong> El texto de las
+      páginas que traduces <strong>no se envía a Google ni a nosotros</strong>: nunca sale del
+      móvil.
+    </p>
+  </div>
+  <p>
+    La primera vez que traduces a un idioma, la app descarga de Google el modelo de ese idioma
+    (unos 30 MB). En esa descarga Google ve tu dirección IP y qué idioma se está descargando —
+    igual que en cualquier descarga de un archivo. A partir de ahí el traductor funciona sin
+    conexión. La detección del idioma de la página también es local. Los modelos descargados se
+    quedan en el almacenamiento privado de la app.
+  </p>
+
+  <h3>In-App Review — valoraciones</h3>
+  <p>
+    Si pulsas «Valora la app» en Ajustes, Google muestra su propio diálogo de valoración. La nota
+    y el comentario van directos a Google Play: <strong>Cifrax nunca los ve</strong>, ni siquiera
+    sabe si llegaste a valorar.
+  </p>
+
+  <h2>5. Conexiones de red y DNS</h2>
+  <p>
+    Es importante distinguir dos cosas: la navegación, que es cosa tuya, y las conexiones que hace
+    la propia aplicación.
+  </p>
+
+  <h3>Cuando navegas</h3>
+  <p>
+    Al abrir una web, tu dispositivo se conecta a esa web y a los recursos que ella cargue (los
+    que el bloqueador no corte antes). Esto es lo que hace cualquier navegador y no implica
+    recogida de datos por nuestra parte: no vemos ni registramos las páginas que visitas.
+  </p>
+  <p>
+    La resolución de nombres de dominio de la navegación la realiza <strong>el sistema
+    Android</strong>, con el DNS que tengas configurado — normalmente el de tu operador o el de tu
+    red wifi, que puede ver y registrar los dominios que consultas. Esto es así en todos los
+    navegadores. Si quieres cifrar también ese tráfico, Android incluye <strong>«DNS
+    privado»</strong> a nivel de sistema; en Ajustes → Privacidad de Cifrax hay un acceso directo
+    a esa opción de Android con instrucciones.
+  </p>
+
+  <h3>«DNS cifrado (DoH)» — qué cubre exactamente</h3>
+  <div class="callout">
+    <p>
+      El ajuste <strong>«DNS cifrado (DoH)»</strong> de Cifrax se aplica a <strong>las conexiones
+      propias de la aplicación</strong> —en concreto, a la descarga de las listas de filtros del
+      bloqueador—, <strong>no a tu navegación</strong>. Preferimos decirlo con claridad a dejar
+      que se entienda de más.
+    </p>
+  </div>
+  <p>
+    Con este ajuste activado (viene activado), esas peticiones resuelven los nombres contra
+    <strong>Cloudflare (1.1.1.1)</strong> mediante DNS-over-HTTPS. Cloudflare ve entonces
+    únicamente los dominios de los proveedores de listas de filtros —siempre los mismos, los de
+    EasyList, AdGuard, uBlock Origin y similares— y tu dirección IP. <strong>No ve ningún dominio
+    de tu navegación</strong>, porque la navegación no pasa por ahí. Si la consulta falla, se
+    recurre al DNS del sistema.
+  </p>
+  <p>
+    Puedes <strong>desactivarlo cuando quieras</strong> en Ajustes → Privacidad → «DNS cifrado
+    (DoH)»; entonces esas descargas usarán el DNS del sistema.
+  </p>
+
+  <h3>Otras conexiones de la aplicación</h3>
   <ul>
-    <li><strong>Google Play Billing</strong> — procesa la suscripción de pago. El pago lo
-      gestiona Google; Cifrax no accede a tus datos bancarios.</li>
-    <li><strong>Google Play Integrity API</strong> — verifica que la app y el dispositivo no
-      estén manipulados, para proteger contra fraude y copias no autorizadas.</li>
+    <li><strong>Listas de filtros:</strong> cada 24 h se descargan de sus proveedores públicos
+      (easylist.to, filters.adtidy.org, secure.fanboy.co.nz, pgl.yoyo.org y GitHub). Solo se
+      descargan archivos; no se les envía información sobre ti ni sobre tu navegación.</li>
+    <li><strong>Descargas de vídeo:</strong> cuando pides descargar un vídeo, la app se conecta al
+      servidor de ese vídeo. Nada pasa por ningún servidor nuestro.</li>
+    <li><strong>Bloqueador de anuncios:</strong> funciona <strong>íntegramente en el
+      dispositivo</strong>. Ninguna dirección que visitas se consulta contra un servicio externo
+      para decidir si se bloquea.</li>
   </ul>
 
-  <h2>5. Permisos de la aplicación</h2>
-  <p>Cifrax solicita los permisos mínimos necesarios:</p>
+  <h2>6. Suscripción</h2>
+  <p>
+    Tu suscripción está asociada a <strong>tu cuenta de Google</strong>, no a esta instalación de
+    la app. Cifrax consulta a Google Play si está activa al abrirse y al volver a primer plano.
+  </p>
+  <p>
+    En el dispositivo solo se guarda la <strong>fecha de la última comprobación con resultado
+    positivo</strong>, y sirve exclusivamente para que la app siga funcionando durante un periodo
+    breve sin conexión. No contiene datos de pago ni identifica tu cuenta.
+  </p>
+  <p>
+    Puedes <strong>gestionar o cancelar la suscripción en cualquier momento</strong> desde
+    <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google
+    Play → Suscripciones</a>. Ten en cuenta que <strong>desinstalar la app no cancela la
+    suscripción</strong>: hay que cancelarla en Google Play. Del mismo modo, si reinstalas la app
+    o cambias de dispositivo, tu suscripción se recupera al iniciar sesión con la misma cuenta de
+    Google.
+  </p>
+
+  <h2>7. Edad mínima</h2>
+  <p>
+    Cifrax está destinado exclusivamente a personas <strong>mayores de 18 años</strong>. No está
+    dirigido a menores y no recopila intencionadamente datos de menores.
+  </p>
+
+  <h2>8. Compartición de datos</h2>
+  <p>
+    <strong>No compartimos, vendemos ni cedemos datos a terceros.</strong> No recibimos datos
+    personales tuyos, así que no hay nada que compartir. Las únicas transmisiones existentes son
+    las descritas en los apartados 4 y 5, y ocurren entre tu dispositivo y Google o los
+    proveedores de listas, nunca a través nuestro.
+  </p>
+
+  <h2>9. Eliminación de datos</h2>
+  <p>
+    Como todo se guarda localmente, tienes dos vías y ambas son inmediatas:
+  </p>
   <ul>
-    <li><strong>INTERNET</strong> — cargar las páginas web y descargar el contenido que tú
-      solicitas.</li>
-    <li><strong>ACCESS_NETWORK_STATE</strong> — comprobar la conectividad antes de operaciones
-      de red.</li>
-    <li><strong>POST_NOTIFICATIONS</strong> — mostrar el progreso y el resultado de las
-      descargas.</li>
-    <li><strong>USE_BIOMETRIC</strong> — permitir desbloquear la app con tu huella dactilar.</li>
-    <li><strong>WRITE_EXTERNAL_STORAGE</strong> (solo en Android 10 e inferiores) — guardar los
-      archivos descargados en el almacenamiento del dispositivo.</li>
+    <li><strong>Borrar datos</strong> desde Ajustes de Android → Aplicaciones → Cifrax: elimina
+      configuración, marcadores, PIN, pestañas y modelos de traducción descargados.</li>
+    <li><strong>Desinstalar la app</strong>: elimina todo lo anterior. Los archivos que hayas
+      descargado a la carpeta pública de descargas se conservan, porque son tuyos.</li>
   </ul>
-
-  <h2>6. Edad mínima</h2>
   <p>
-    Cifrax está destinado exclusivamente a personas <strong>mayores de 18 años</strong>. No
-    está dirigido a menores y no recopila intencionadamente datos de menores.
+    No necesitas escribirnos para borrar tus datos: no tenemos ninguno. Recuerda que borrar los
+    datos de la app <strong>no cancela la suscripción</strong> (apartado 6).
   </p>
 
-  <h2>7. Compartición de datos</h2>
+  <h2>10. Cambios en esta política</h2>
   <p>
-    <strong>No compartimos, vendemos ni cedemos datos a terceros.</strong> Al no recopilar
-    datos personales, no hay información que compartir.
+    Podremos actualizar esta política cuando cambie el funcionamiento de la app. La fecha de la
+    parte superior refleja la última revisión, y los cambios relevantes se reflejarán en esta
+    misma página.
   </p>
 
-  <h2>8. Eliminación de datos</h2>
-  <p>
-    Como todos los datos se almacenan localmente, <strong>desinstalar la aplicación elimina
-    de forma permanente toda la información</strong> asociada (configuración, PIN, estado de
-    suscripción y archivos temporales). No es necesario contactar con nosotros para borrar tus
-    datos.
-  </p>
-
-  <h2>9. Cambios en esta política</h2>
-  <p>
-    Podremos actualizar esta política ocasionalmente. La fecha de la parte superior reflejará
-    la última revisión. Los cambios relevantes se reflejarán en esta misma página.
-  </p>
-
-  <h2>10. Contacto</h2>
+  <h2>11. Contacto</h2>
   <p>
     Para cualquier duda sobre privacidad, escríbenos a
-    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>.
+    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>. También tienes esta dirección
+    dentro de la app, en Ajustes → Acerca de → «Contacto y reclamaciones».
   </p>
 
   <footer>
