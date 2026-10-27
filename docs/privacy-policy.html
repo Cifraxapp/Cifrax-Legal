@@ -49,15 +49,21 @@
 
   <a class="back" href="index.html">← Inicio</a>
   <h1>Política de Privacidad</h1>
-  <p class="updated">Última actualización: 15 de agosto de 2026</p>
+  <p class="updated">Última actualización: 26 de octubre de 2026</p>
 
   <h2>1. Lo esencial</h2>
   <p>
     Cifrax es un navegador para Android centrado en la privacidad. <strong>No tenemos servidores
-    propios.</strong> No recopilamos datos personales, no usamos analíticas ni herramientas de
-    medición, no incluimos publicidad ni rastreadores, y no accedemos al identificador de
-    publicidad del dispositivo. Nada de lo que hagas en Cifrax se nos envía, porque no hay ningún
-    sitio al que enviarlo.
+    propios.</strong> No recopilamos datos personales, no hemos integrado herramientas de
+    analítica ni de medición, no incluimos publicidad ni rastreadores, y no accedemos al
+    identificador de publicidad del dispositivo. Nada de lo que hagas en Cifrax se nos envía,
+    porque no hay ningún sitio al que enviarlo.
+  </p>
+  <p>
+    Algunos componentes de Google que forman parte de la app sí se comunican con Google. El
+    componente del traductor (ML Kit) envía a Google datos técnicos de diagnóstico y de uso de
+    esa función —nunca el texto que traduces—. Los detallamos en el apartado 4. Esos datos van a
+    Google, no a nosotros.
   </p>
   <p>
     Esta política describe con precisión qué se guarda en tu dispositivo, qué conexiones de red
@@ -160,9 +166,13 @@
   <h3>Google Play Integrity — antifraude</h3>
   <p>
     Verifica que la app y el dispositivo no estén manipulados, para protegernos de copias
-    modificadas. Para emitir ese veredicto, <strong>Google recibe identificadores del dispositivo
-    y de la aplicación</strong>. Es el único componente que transmite identificadores, y lo hace
-    contra Google, no contra nosotros: no recibimos ni almacenamos ninguno.
+    modificadas. Para emitir ese veredicto, Google recibe <strong>datos del dispositivo</strong>
+    (un certificado y un token de atestación generados por Google Play Services), <strong>datos de
+    la app</strong> (nombre del paquete, versión y certificado de firma) y el <strong>estado de la
+    licencia de Google Play</strong> de las cuentas del dispositivo. Según Google, los usa solo
+    para verificar la integridad de la app y del dispositivo, los cifra, no los cede a terceros y
+    los borra tras un periodo de retención fijo. Nosotros no recibimos ni almacenamos ninguno de
+    esos datos: la app solo guarda el veredicto (válido o no).
   </p>
 
   <h3>ML Kit — traductor de páginas</h3>
@@ -179,6 +189,28 @@
     igual que en cualquier descarga de un archivo. A partir de ahí el traductor funciona sin
     conexión. La detección del idioma de la página también es local. Los modelos descargados se
     quedan en el almacenamiento privado de la app.
+  </p>
+  <p>
+    <strong>Datos de diagnóstico que ML Kit envía a Google.</strong> ML Kit, el componente de
+    Google que hace la traducción y la detección de idioma, envía a Google información técnica
+    para diagnóstico y análisis de uso de esas funciones:
+  </p>
+  <ul>
+    <li>datos del dispositivo (fabricante, modelo, versión del sistema) y de la app (nombre del
+      paquete y versión);</li>
+    <li>un <strong>identificador por instalación</strong> que, según Google, no está pensado para
+      identificarte a ti ni a tu dispositivo;</li>
+    <li>métricas de rendimiento (por ejemplo, el tiempo de respuesta), el tamaño de la entrada y
+      de la salida, la versión de la función, el tipo de evento (inicio, descarga de modelo,
+      traducción) y códigos de error;</li>
+    <li>los <strong>idiomas</strong> de origen y destino configurados y el idioma detectado.</li>
+  </ul>
+  <p>
+    <strong>No incluye el texto de las páginas ni su traducción, ni las direcciones que
+    visitas.</strong> Según Google, estos datos viajan cifrados (HTTPS) y no se ceden a terceros.
+    Van a Google, no a nosotros, y no podemos consultarlos. Fuente:
+    <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank"
+    rel="noopener">divulgación de datos de ML Kit</a>.
   </p>
 
   <h3>In-App Review — valoraciones</h3>
@@ -229,6 +261,11 @@
   <p>
     Puedes <strong>desactivarlo cuando quieras</strong> en Ajustes → Privacidad → «DNS cifrado
     (DoH)»; entonces esas descargas usarán el DNS del sistema.
+  </p>
+  <p>
+    Los componentes de Google descritos en el apartado 4 (Play Billing, Play Integrity, ML Kit e
+    In-App Review) se conectan a los servidores de Google con su propia resolución de nombres;
+    el ajuste DoH no se aplica a ellos.
   </p>
 
   <h3>Otras conexiones de la aplicación</h3>
