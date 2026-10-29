@@ -30,6 +30,7 @@
   .updated{color:var(--muted);font-size:14px;margin-top:6px}
   a{color:var(--gold);text-decoration:none}
   a:hover{text-decoration:underline}
+  .lang{font-size:14px;color:var(--muted);margin:0 0 4px}
   .back{display:inline-block;margin-bottom:8px;color:var(--muted);font-size:14px}
   .callout{background:var(--surface);border-left:3px solid var(--gold);padding:16px 18px;margin:18px 0;border-radius:0 6px 6px 0}
   .callout p:last-child{margin-bottom:0}
@@ -37,6 +38,8 @@
   .tabla th,.tabla td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top}
   .tabla th{color:var(--gold);font-weight:600;white-space:nowrap}
   .tabla code{font-size:12px}
+  .titular{background:var(--surface);border-left:3px solid var(--gold);padding:14px 18px;margin:12px 0 18px;border-radius:0 6px 6px 0}
+  .titular p{margin-bottom:4px}
   footer{border-top:1px solid var(--border);margin-top:48px;padding-top:24px;color:var(--muted);font-size:14px}
   @media(max-width:600px){.container{padding:32px 18px 60px}h1{font-size:22px}}
 </style>
@@ -48,8 +51,9 @@
   </header>
 
   <a class="back" href="index.html">← Inicio</a>
+  <p class="lang"><strong>Español</strong> · <a href="privacy-policy-ca.html" hreflang="ca">Català</a></p>
   <h1>Política de Privacidad</h1>
-  <p class="updated">Última actualización: 26 de octubre de 2026</p>
+  <p class="updated">Última actualización: 29 de octubre de 2026</p>
 
   <h2>1. Lo esencial</h2>
   <p>
@@ -57,7 +61,8 @@
     propios.</strong> No recopilamos datos personales, no hemos integrado herramientas de
     analítica ni de medición, no incluimos publicidad ni rastreadores, y no accedemos al
     identificador de publicidad del dispositivo. Nada de lo que hagas en Cifrax se nos envía,
-    porque no hay ningún sitio al que enviarlo.
+    porque no hay ningún sitio al que enviarlo. Los únicos datos tuyos que podemos llegar a
+    recibir son los que tú decidas mandarnos por correo electrónico.
   </p>
   <p>
     Algunos componentes de Google que forman parte de la app sí se comunican con Google. El
@@ -71,6 +76,15 @@
     contrastarse línea por línea con el código de la app.
   </p>
 
+  <h3>Responsable</h3>
+  <div class="titular">
+    <p><strong>Titular:</strong> David González Caballero</p>
+    <p><strong>NIF:</strong> 53836079W</p>
+    <p><strong>Domicilio:</strong> Noi del Sucre, 3, 5.º 1.ª, 08130 Santa Perpètua de Mogoda (Barcelona), España</p>
+    <p><strong>Correo electrónico:</strong>
+      <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a></p>
+  </div>
+
   <h2>2. Datos que se guardan en tu dispositivo</h2>
   <p>
     Toda tu configuración se guarda <strong>únicamente en el dispositivo</strong>, cifrada con
@@ -80,8 +94,8 @@
   <ul>
     <li>Tus <strong>marcadores</strong>, con el nombre y la imagen que les hayas puesto.</li>
     <li>Los <strong>ajustes</strong> de privacidad, navegación, descargas e idioma.</li>
-    <li>El <strong>PIN de acceso</strong> y el <strong>PIN señuelo</strong>, guardados siempre
-      como hash con sal (nunca en texto legible, ni siquiera cifrado y reversible).</li>
+    <li>Los <strong>PIN de acceso</strong>, guardados siempre como hash con sal (nunca en texto
+      legible, ni siquiera cifrado y reversible).</li>
     <li>Las <strong>pestañas abiertas</strong>, solo si has desactivado «Borrar al cerrar».</li>
     <li>La fecha de la <strong>última comprobación de tu suscripción</strong> (ver apartado 6).</li>
   </ul>
@@ -92,8 +106,9 @@
   </p>
 
   <h2>3. Permisos de la aplicación</h2>
-  <p>Cifrax declara estos permisos y ningún otro. No pide acceso a contactos, ubicación,
-    micrófono, cámara, llamadas ni SMS.</p>
+  <p>Cifrax declara estos permisos del sistema y ningún otro (además de un permiso interno que
+    Android genera automáticamente para la propia app y que no da acceso a nada fuera de ella).
+    No pide acceso a contactos, ubicación, micrófono, cámara, llamadas ni SMS.</p>
 
   <table class="tabla">
     <tr><th>Permiso</th><th>Para qué se usa</th></tr>
@@ -108,6 +123,10 @@
     <tr>
       <td><code>USE_BIOMETRIC</code></td>
       <td>Desbloquear la app con tu huella. La huella la valida Android; la app solo recibe un «sí» o un «no» y nunca ve tus datos biométricos.</td>
+    </tr>
+    <tr>
+      <td><code>USE_FINGERPRINT</code></td>
+      <td>El mismo uso que el anterior, en versiones antiguas de Android. Lo añade automáticamente la librería de huella de Android.</td>
     </tr>
     <tr>
       <td><code>com.android.vending.BILLING</code></td>
@@ -273,8 +292,8 @@
     <li><strong>Listas de filtros:</strong> cada 24 h se descargan de sus proveedores públicos
       (easylist.to, filters.adtidy.org, secure.fanboy.co.nz, pgl.yoyo.org y GitHub). Solo se
       descargan archivos; no se les envía información sobre ti ni sobre tu navegación.</li>
-    <li><strong>Descargas de vídeo:</strong> cuando pides descargar un vídeo, la app se conecta al
-      servidor de ese vídeo. Nada pasa por ningún servidor nuestro.</li>
+    <li><strong>Descargas:</strong> cuando descargas un archivo, la app se conecta directamente al
+      servidor de ese archivo. Nada pasa por ningún servidor nuestro.</li>
     <li><strong>Bloqueador de anuncios:</strong> funciona <strong>íntegramente en el
       dispositivo</strong>. Ninguna dirección que visitas se consulta contra un servicio externo
       para decidir si se bloquea.</li>
@@ -307,13 +326,61 @@
 
   <h2>8. Compartición de datos</h2>
   <p>
-    <strong>No compartimos, vendemos ni cedemos datos a terceros.</strong> No recibimos datos
-    personales tuyos, así que no hay nada que compartir. Las únicas transmisiones existentes son
-    las descritas en los apartados 4 y 5, y ocurren entre tu dispositivo y Google o los
-    proveedores de listas, nunca a través nuestro.
+    <strong>No compartimos, vendemos ni cedemos datos a terceros.</strong> Salvo los correos que
+    nos envíes, no recibimos datos personales tuyos, así que no hay nada que compartir. Las únicas
+    transmisiones existentes son las descritas en los apartados 4 y 5, y ocurren entre tu
+    dispositivo y Google, Cloudflare o los proveedores de listas, nunca a través nuestro.
   </p>
 
-  <h2>9. Eliminación de datos</h2>
+  <h2>9. Para qué se tratan los datos y con qué base legal</h2>
+  <p>
+    Aunque nosotros no recibimos datos de tu uso de la app, el Reglamento General de Protección de
+    Datos (RGPD) nos obliga a explicarte por qué intervienen los tratamientos descritos arriba:
+  </p>
+  <ul>
+    <li><strong>Suscripción (Google Play Billing):</strong> comprobar si tienes acceso de pago.
+      Base legal: la ejecución del contrato de suscripción (art. 6.1.b RGPD).</li>
+    <li><strong>Antifraude (Google Play Integrity):</strong> proteger la app frente a copias
+      manipuladas y usos fraudulentos. Base legal: nuestro interés legítimo en la seguridad del
+      servicio (art. 6.1.f RGPD).</li>
+    <li><strong>Traductor (ML Kit):</strong> que la función de traducción funcione, y que Google
+      reciba los datos técnicos de diagnóstico descritos en el apartado 4. Base legal: interés
+      legítimo en ofrecer y mantener esa función (art. 6.1.f RGPD).</li>
+    <li><strong>Descarga de listas de filtros (DoH con Cloudflare):</strong> mantener actualizado
+      el bloqueador. Cloudflare solo ve tu dirección IP y los dominios de los proveedores de
+      listas. Base legal: interés legítimo en prestar el bloqueo de anuncios (art. 6.1.f RGPD).
+      Puedes desactivarlo en Ajustes.</li>
+    <li><strong>Correos que nos envíes:</strong> responder a tu consulta o reclamación. Base
+      legal: tu solicitud y nuestro interés legítimo en atenderla (art. 6.1.b y 6.1.f RGPD).
+      Conservamos esos correos solo el tiempo necesario para resolver la consulta y atender
+      posibles reclamaciones derivadas.</li>
+  </ul>
+
+  <h2>10. Transferencias fuera de la Unión Europea</h2>
+  <p>
+    Google y Cloudflare tienen sede en Estados Unidos, por lo que los datos técnicos que reciben
+    (apartados 4 y 5) pueden tratarse fuera del Espacio Económico Europeo. Ambas empresas declaran
+    estar adheridas al <strong>Marco de Privacidad de Datos UE-EE. UU.</strong> y utilizan las
+    cláusulas contractuales tipo aprobadas por la Comisión Europea como garantía adicional.
+  </p>
+
+  <h2>11. Tus derechos</h2>
+  <p>
+    Puedes ejercer tus derechos de <strong>acceso, rectificación, supresión, oposición,
+    limitación del tratamiento y portabilidad</strong> escribiéndonos a
+    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>. Ten en cuenta que nosotros
+    no guardamos datos de tu uso de la app: lo que hay en tu dispositivo puedes borrarlo tú mismo
+    (apartado 12), y los datos técnicos que reciben Google o Cloudflare los gestionan ellos, así
+    que las solicitudes sobre esos datos debes dirigirlas también a ellos.
+  </p>
+  <p>
+    Si consideras que no hemos atendido correctamente tus derechos, puedes presentar una
+    reclamación ante la <strong>Agencia Española de Protección de Datos</strong>
+    (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>) o ante la
+    autoridad de protección de datos de tu país.
+  </p>
+
+  <h2>12. Eliminación de datos</h2>
   <p>
     Como todo se guarda localmente, tienes dos vías y ambas son inmediatas:
   </p>
@@ -324,18 +391,19 @@
       descargado a la carpeta pública de descargas se conservan, porque son tuyos.</li>
   </ul>
   <p>
-    No necesitas escribirnos para borrar tus datos: no tenemos ninguno. Recuerda que borrar los
-    datos de la app <strong>no cancela la suscripción</strong> (apartado 6).
+    No necesitas escribirnos para borrar los datos de la app: nosotros no tenemos ninguno. Si nos
+    has escrito y quieres que borremos tus correos, pídenoslo. Recuerda que borrar los datos de la
+    app <strong>no cancela la suscripción</strong> (apartado 6).
   </p>
 
-  <h2>10. Cambios en esta política</h2>
+  <h2>13. Cambios en esta política</h2>
   <p>
     Podremos actualizar esta política cuando cambie el funcionamiento de la app. La fecha de la
     parte superior refleja la última revisión, y los cambios relevantes se reflejarán en esta
     misma página.
   </p>
 
-  <h2>11. Contacto</h2>
+  <h2>14. Contacto</h2>
   <p>
     Para cualquier duda sobre privacidad, escríbenos a
     <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>. También tienes esta dirección

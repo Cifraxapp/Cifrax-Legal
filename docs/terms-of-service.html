@@ -21,16 +21,25 @@
   .logo .x{color:var(--gold)}
   h1{font-size:26px;margin:20px 0 4px;font-weight:700}
   h2{font-size:18px;color:var(--gold);margin:34px 0 12px;font-weight:600}
+  h3{font-size:15px;color:var(--text);margin:22px 0 8px;font-weight:600}
   p,li{color:var(--text);margin-bottom:12px}
   ul{padding-left:22px;margin-bottom:16px}
   li{margin-bottom:8px}
   strong{color:#fff}
+  code{background:var(--surface);padding:1px 5px;border-radius:4px;font-size:13px}
   .updated{color:var(--muted);font-size:14px;margin-top:6px}
   a{color:var(--gold);text-decoration:none}
   a:hover{text-decoration:underline}
+  .lang{font-size:14px;color:var(--muted);margin:0 0 4px}
   .back{display:inline-block;margin-bottom:8px;color:var(--muted);font-size:14px}
+  .titular,.callout,.anexo{background:var(--surface);border-left:3px solid var(--gold);padding:14px 18px;margin:12px 0 18px;border-radius:0 6px 6px 0}
+  .titular p{margin-bottom:4px}
+  .callout p:last-child,.anexo p:last-child{margin-bottom:0}
+  .anexo{font-size:14px}
+  .indice{columns:2;column-gap:28px;font-size:14px;padding-left:20px}
+  .indice li{margin-bottom:4px}
   footer{border-top:1px solid var(--border);margin-top:48px;padding-top:24px;color:var(--muted);font-size:14px}
-  @media(max-width:600px){.container{padding:32px 18px 60px}h1{font-size:22px}}
+  @media(max-width:600px){.container{padding:32px 18px 60px}h1{font-size:22px}.indice{columns:1}}
 </style>
 </head>
 <body>
@@ -40,134 +49,364 @@
   </header>
 
   <a class="back" href="index.html">← Inicio</a>
+  <p class="lang"><strong>Español</strong> · <a href="terms-of-service-ca.html" hreflang="ca">Català</a></p>
   <h1>Términos del Servicio</h1>
-  <p class="updated">Última actualización: 13 de agosto de 2026</p>
+  <p class="updated">Última actualización: 29 de octubre de 2026</p>
 
-  <h2>1. Aceptación</h2>
-  <p>
-    Al instalar y usar Cifrax aceptas estos Términos del Servicio. Si no estás de acuerdo, no
-    utilices la aplicación.
-  </p>
+  <div class="callout">
+    <p>
+      <strong>Resumen en pocas líneas</strong> (lo que manda es el texto completo): Cifrax es un
+      navegador que bloquea anuncios y rastreadores y protege el acceso con PIN. Tiene 30 días de
+      prueba gratis, una vez por cuenta de Google, y después se paga cada mes hasta que canceles en
+      Google Play. No es una VPN ni te hace anónimo. Tus datos se quedan en tu móvil: si los
+      borras o olvidas el PIN, no podemos recuperarlos. Eres responsable de lo que hagas con la
+      app.
+    </p>
+  </div>
 
-  <h2>2. Descripción del servicio</h2>
-  <p>
-    Cifrax es un navegador para Android centrado en la privacidad. Algunas funciones requieren
-    una suscripción de pago tras el período de prueba.
-  </p>
+  <ol class="indice">
+    <li><a href="#titular">Quién presta el servicio</a></li>
+    <li><a href="#aceptacion">Qué es Cifrax y aceptación</a></li>
+    <li><a href="#limites">Qué no hace Cifrax</a></li>
+    <li><a href="#suscripcion">Suscripción, precio y prueba</a></li>
+    <li><a href="#cancelacion">Renovación y cancelación</a></li>
+    <li><a href="#desistimiento">Derecho de desistimiento</a></li>
+    <li><a href="#usuario">Tus obligaciones</a></li>
+    <li><a href="#terceros">Servicios y contenidos de terceros</a></li>
+    <li><a href="#actualizaciones">Actualizaciones y seguridad</a></li>
+    <li><a href="#cambios-app">Cambios en la aplicación</a></li>
+    <li><a href="#fin">Fin del servicio</a></li>
+    <li><a href="#responsabilidad">Garantía y responsabilidad</a></li>
+    <li><a href="#licencia">Licencia y propiedad intelectual</a></li>
+    <li><a href="#infracciones">Avisos de infracción de derechos</a></li>
+    <li><a href="#cambios-terminos">Cambios en estos términos</a></li>
+    <li><a href="#ley">Ley aplicable y reclamaciones</a></li>
+    <li><a href="#varios">Otras disposiciones</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ol>
 
-  <h2>3. Suscripción y precio</h2>
-  <ul>
-    <li><strong>Producto:</strong> <code>cifrax_monthly</code> — suscripción mensual.</li>
-    <li><strong>Precio:</strong> 1,49 € al mes (IVA incluido según corresponda).</li>
-    <li><strong>Precio según el país:</strong> el importe indicado corresponde a la zona euro. En
-      otros países el precio puede variar conforme a la
-      <a href="https://support.google.com/googleplay/android-developer/answer/6334373" target="_blank" rel="noopener">tabla
-      de precios de Google Play</a> y al tipo de cambio, impuestos y normativa locales.
-      <strong>El precio exacto y definitivo, en tu moneda, es el que Google Play te muestra en la
-      pantalla de compra antes de confirmar</strong>; ese importe prevalece sobre cualquier cifra
-      orientativa de esta página.</li>
-    <li><strong>Renovación:</strong> automática cada mes hasta que la canceles.</li>
-    <li><strong>Período de prueba:</strong> 30 días gratis. Si no cancelas antes de que termine,
-      la suscripción se activa automáticamente.</li>
-    <li><strong>Cambios de precio:</strong> cualquier modificación futura del precio se te
-      notificará a través de Google Play con la antelación exigida por la ley, y podrás cancelar
-      antes de que surta efecto.</li>
-  </ul>
-
-  <h2>4. Gestión, cancelación y reembolsos</h2>
+  <h2 id="titular">1. Quién presta el servicio</h2>
+  <p>Cifrax es una aplicación desarrollada y ofrecida por:</p>
+  <div class="titular">
+    <p><strong>Titular:</strong> David González Caballero</p>
+    <p><strong>NIF:</strong> 53836079W</p>
+    <p><strong>Domicilio:</strong> Noi del Sucre, 3, 5.º 1.ª, 08130 Santa Perpètua de Mogoda (Barcelona), España</p>
+    <p><strong>Correo electrónico:</strong>
+      <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a></p>
+  </div>
   <p>
-    La suscripción se gestiona a través de tu cuenta de Google Play. Puedes
-    <strong>cancelar en cualquier momento</strong> desde Google Play
-    (Suscripciones → Cifrax → Cancelar); seguirás teniendo acceso hasta el final del período ya
-    pagado. Los <strong>reembolsos</strong> se rigen por la
-    <a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">política
-    de reembolsos de Google Play</a>.
-  </p>
-
-  <h2>5. Uso responsable</h2>
-  <p>
-    Cifrax es una herramienta de navegación y descarga. <strong>Eres el único responsable</strong>
-    del contenido que visites o descargues y del cumplimiento de las leyes aplicables, incluidos
-    los derechos de propiedad intelectual y las condiciones de uso de los sitios de terceros. No
-    debes utilizar la app para fines ilícitos.
-  </p>
-  <p>
-    Cifrax <strong>no elude ni desactiva medidas tecnológicas de protección</strong>. El contenido
-    protegido con DRM puede reproducirse, pero <strong>no puede descargarse</strong>: es una
-    limitación intencional del producto.
+    En estos términos, «nosotros» se refiere al titular indicado y «tú», a la persona que usa la
+    aplicación.
   </p>
 
-  <h2>6. Edad mínima</h2>
+  <h2 id="aceptacion">2. Qué es Cifrax y aceptación de estos términos</h2>
   <p>
-    El uso de Cifrax está reservado a <strong>mayores de 18 años</strong>.
+    Cifrax es un navegador web para Android centrado en la privacidad: bloquea anuncios y
+    rastreadores con listas de filtros públicas, permite proteger el acceso con PIN o huella,
+    borra los datos de navegación al cerrar si así lo eliges y traduce páginas dentro del
+    dispositivo. Para usarla tras el período de prueba hace falta una suscripción de pago.
+  </p>
+  <p>
+    Al instalar Cifrax, empezar la prueba o suscribirte, aceptas estos términos y la
+    <a href="privacy-policy.html">Política de Privacidad</a>. Si no estás de acuerdo, no uses la
+    aplicación. Puedes consultarlos en cualquier momento desde la app, en Ajustes → Acerca de →
+    «Términos y privacidad», y guardarlos o imprimirlos desde esta página.
   </p>
 
-  <h2>7. Limitación de responsabilidad</h2>
+  <h2 id="limites">3. Qué no hace Cifrax</h2>
   <p>
-    Cifrax se ofrece «tal cual» y «según disponibilidad», sin garantías de ningún tipo. En la
-    máxima medida permitida por la ley, no nos hacemos responsables de daños directos,
-    indirectos, incidentales o consecuentes derivados del uso o la imposibilidad de uso de la
-    aplicación, ni del contenido de terceros al que se acceda a través de ella.
-  </p>
-
-  <h2>8. Modificaciones</h2>
-  <p>
-    Podemos actualizar estos términos en el futuro. La fecha de la parte superior indicará la
-    última revisión. El uso continuado de la app tras los cambios implica su aceptación.
-  </p>
-
-  <h2>9. Ley aplicable</h2>
-  <p>
-    Estos términos se rigen por la <strong>legislación española</strong>. Para cualquier
-    controversia serán competentes los juzgados y tribunales que correspondan conforme a la ley
-    aplicable al consumidor.
-  </p>
-
-  <h2>10. Contacto</h2>
-  <p>
-    Para cualquier consulta, escríbenos a
-    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>.
-  </p>
-
-  <h2>11. Resolución de disputas y arbitraje</h2>
-  <p>
-    Ante cualquier controversia derivada de estos Términos o del uso de Cifrax, las partes se
-    comprometen a intentar resolverla de forma amistosa en un plazo de <strong>30 días</strong>
-    desde la notificación por escrito a
-    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>.
-  </p>
-  <p>
-    Si no se alcanza un acuerdo, la controversia se someterá a <strong>arbitraje de consumo</strong>
-    ante la Junta Arbitral de Consumo competente conforme a la normativa española
-    (Real Decreto 231/2008), con carácter vinculante para ambas partes.
-  </p>
-  <p>
-    Lo anterior no limita el derecho del usuario a acudir a los tribunales ordinarios ni a las
-    autoridades de protección al consumidor que le correspondan por ley.
-  </p>
-
-  <h2>12. Propiedad intelectual y notificaciones de infracción (DMCA / EUCD)</h2>
-  <p>
-    Cifrax es una herramienta de navegación. No aloja, almacena ni distribuye contenido de
-    terceros. El usuario es el único responsable de los contenidos a los que accede o descarga.
-  </p>
-  <p>
-    Si eres titular de derechos de autor y crees que algún contenido accesible a través de
-    Cifrax infringe tus derechos, puedes notificárnoslo por escrito a
-    <strong><a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a></strong> indicando:
+    Queremos que sepas exactamente qué esperar. Cifrax mejora tu privacidad, pero
+    <strong>tiene límites que forman parte de su descripción</strong>:
   </p>
   <ul>
-    <li>Identificación del material presuntamente infractor y su ubicación.</li>
-    <li>Tus datos de contacto (nombre, dirección, email).</li>
-    <li>Declaración de buena fe de que el uso no está autorizado por el titular, su agente o
-      la ley.</li>
-    <li>Declaración, bajo pena de falsedad, de que la información es exacta y eres el titular
-      o estás autorizado a actuar en su nombre.</li>
+    <li><strong>No es una VPN ni te hace anónimo.</strong> No oculta tu dirección IP. Las webs que
+      visitas, tu operador y la red a la que te conectas pueden saber que te conectas y a qué
+      dominios. Si inicias sesión en una web, esa web sabe quién eres.</li>
+    <li><strong>El bloqueo no es infalible.</strong> Depende de listas de filtros públicas que
+      mantienen terceros: algunos anuncios o rastreadores pueden no bloquearse, y a veces el
+      bloqueo puede impedir que una web legítima funcione bien. Puedes desactivar el bloqueador
+      cuando lo necesites.</li>
+    <li><strong>El PIN y la huella protegen el acceso a la app, no el móvil.</strong> No sustituyen
+      el bloqueo de pantalla de Android ni protegen frente a programas maliciosos, dispositivos
+      con root o manipulados, ni frente a un análisis técnico del dispositivo.</li>
+    <li><strong>No es un antivirus ni un filtro de estafas.</strong> No garantiza que las webs que
+      visitas sean seguras ni te protege del phishing o de los fraudes en línea.</li>
+    <li><strong>No guarda copias de tus datos.</strong> Todo se guarda solo en tu dispositivo. Lo
+      que borres, lo que se elimine con «Borrar datos al cerrar» o al desinstalar, y lo que se
+      pierda si reinicias la app tras olvidar el PIN, <strong>no se puede recuperar</strong>:
+      nosotros no tenemos ninguna copia.</li>
+    <li><strong>La traducción es automática.</strong> Puede contener errores u omisiones. No la uses
+      como base para decisiones legales, médicas, financieras o de seguridad.</li>
+    <li><strong>El «DNS cifrado (DoH)» solo cubre las conexiones propias de la app</strong> (la
+      descarga de las listas de filtros), no tu navegación. Te lo explicamos con detalle en la
+      <a href="privacy-policy.html">Política de Privacidad</a>.</li>
+  </ul>
+
+  <h2 id="suscripcion">4. Suscripción, precio y período de prueba</h2>
+  <ul>
+    <li><strong>Producto:</strong> <code>cifrax_monthly</code>, suscripción mensual que se
+      contrata y se paga a través de Google Play.</li>
+    <li><strong>Precio:</strong> desde <strong>1,49 € al mes</strong>, impuestos incluidos.
+      <strong>El precio varía según el país</strong>, también dentro de la zona euro, y se
+      muestra en tu moneda.</li>
+    <li><strong>Precio aplicable:</strong> el precio exacto y definitivo, con los impuestos de tu
+      país, es <strong>el que Google Play te muestra en la pantalla de compra antes de
+      confirmar</strong>, y prevalece sobre cualquier cifra de esta página.</li>
+    <li><strong>Período de prueba:</strong> 30 días gratis, <strong>una sola vez por cuenta de
+      Google</strong> (lo controla Google Play). Si no cancelas antes de que termine, empieza la
+      suscripción de pago y se te cobra el primer mes.</li>
+    <li><strong>Cambios de precio:</strong> cualquier cambio futuro se te comunicará a través de
+      Google Play con la antelación que exija la ley, y podrás cancelar antes de que se aplique.
+      Si no cancelas, se aplicará el nuevo precio desde la siguiente renovación.</li>
+    <li><strong>Pago:</strong> lo procesa Google. Nosotros no vemos ni guardamos tus datos de pago,
+      y las incidencias con el cobro, el método de pago o la moneda se rigen por las condiciones
+      de Google Play.</li>
+  </ul>
+
+  <h2 id="cancelacion">5. Renovación y cancelación</h2>
+  <p>
+    La suscripción <strong>se renueva automáticamente cada mes</strong>. En
+    <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google
+    Play → Suscripciones</a> puedes ver la fecha de la próxima renovación y
+    <strong>cancelar en cualquier momento</strong>, sin coste y en pocos pasos. Si cancelas,
+    mantienes el acceso hasta el final del período ya pagado y no se te vuelve a cobrar.
+  </p>
+  <p>
+    <strong>Desinstalar la app o borrar sus datos no cancela la suscripción</strong>: hay que
+    cancelarla en Google Play. Si cancelas durante la prueba gratuita, no se te cobra nada.
+  </p>
+
+  <h2 id="desistimiento">6. Derecho de desistimiento</h2>
+  <p>
+    Si eres consumidor, puedes <strong>desistir del contrato en un plazo de 14 días
+    naturales</strong> sin indicar el motivo. El plazo empieza el día en que contratas la
+    suscripción, también cuando empiezas con el período de prueba.
+  </p>
+  <ul>
+    <li><strong>Si empezaste con la prueba gratuita:</strong> los 14 días transcurren durante la
+      prueba, así que puedes desistir sin haber pagado nada. Basta con cancelar en Google Play o
+      enviarnos tu decisión.</li>
+    <li><strong>Si te suscribiste sin prueba:</strong> puedes desistir en los 14 días siguientes a
+      la compra. Al suscribirte pides que el servicio empiece de inmediato, por lo que, en la
+      medida en que la ley lo permita, descontaremos del reembolso la parte proporcional al tiempo
+      que lo hayas usado.</li>
   </ul>
   <p>
-    Atenderemos las notificaciones válidas en el menor tiempo posible conforme a la legislación
-    aplicable.
+    <strong>Cómo ejercerlo:</strong> solicita el reembolso desde Google Play o envíanos una
+    declaración inequívoca a <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>,
+    indicando la cuenta de Google con la que te suscribiste. Puedes usar el
+    <a href="#anexo">formulario del anexo</a>, aunque no es obligatorio. Basta con que envíes tu
+    comunicación antes de que termine el plazo.
   </p>
+  <p>
+    <strong>Reembolso:</strong> te devolveremos lo que corresponda sin demora y, como máximo, en
+    14 días desde que recibamos tu decisión, por el mismo medio de pago que usaste en Google Play
+    y sin ningún coste para ti.
+  </p>
+
+  <h2 id="usuario">7. Tus obligaciones</h2>
+  <ul>
+    <li><strong>Edad:</strong> Cifrax está reservada a <strong>mayores de 18 años</strong>. Si eres
+      menor de edad, no puedes usarla.</li>
+    <li><strong>Uso lícito:</strong> eres responsable del uso que hagas de Cifrax y de los sitios y
+      contenidos a los que accedas o que guardes con ella. Debes respetar la ley, los derechos de
+      propiedad intelectual de terceros y las condiciones de uso de los sitios que visitas. No
+      puedes usar la app para cometer actos ilícitos ni para dañar a terceros.</li>
+    <li><strong>Tu dispositivo y tu PIN:</strong> eres responsable de mantener tu dispositivo
+      protegido, de no compartir tu PIN y de recordarlo. Si lo olvidas, no podemos recuperarlo ni
+      recuperar tus datos (apartado 3).</li>
+    <li><strong>Copias de la app:</strong> usa solo la versión oficial de Google Play. No modifiques
+      la app ni intentes eludir la comprobación de la suscripción.</li>
+  </ul>
+  <p>
+    Si un tercero nos reclama por un uso ilícito que tú hayas hecho de Cifrax, responderás de ese
+    uso conforme a la ley.
+  </p>
+
+  <h2 id="terceros">8. Servicios y contenidos de terceros</h2>
+  <p>
+    Cifrax funciona sobre elementos que no controlamos: <strong>las webs que visitas</strong> y su
+    contenido; <strong>Google</strong> (Google Play, Billing, Play Integrity y el traductor ML Kit);
+    el sistema <strong>Android</strong> y su componente <strong>WebView</strong>, que es el motor
+    que muestra las páginas; las <strong>listas de filtros</strong> públicas que mantienen
+    terceros; el fabricante de tu dispositivo y tu operador.
+  </p>
+  <p>
+    No somos responsables del contenido, la exactitud, la legalidad ni la disponibilidad de las
+    webs de terceros, ni de los fallos, cambios o interrupciones de esos servicios y componentes
+    cuando no se deban a la propia app. Cada uno de ellos se rige por sus propias condiciones.
+  </p>
+
+  <h2 id="actualizaciones">9. Actualizaciones y seguridad</h2>
+  <p>
+    Publicaremos actualizaciones, incluidas las de seguridad, durante el tiempo en que ofrezcamos
+    el servicio. Te recomendamos tener activadas las actualizaciones automáticas de Google Play y
+    mantener Android actualizado.
+  </p>
+  <p>
+    Si no instalas en un plazo razonable una actualización que hayamos puesto a tu disposición y
+    de la que te hayamos informado, <strong>no responderemos de los fallos que esa actualización
+    habría corregido</strong>, tal como permite la normativa sobre contenidos y servicios
+    digitales.
+  </p>
+  <p>
+    La app comprueba la integridad del dispositivo y de la propia app. En dispositivos con root,
+    modificados o con versiones de Android sin soporte, y con copias de la app que no procedan de
+    Google Play, algunas funciones pueden no estar disponibles y no podemos garantizar su
+    funcionamiento ni su seguridad.
+  </p>
+
+  <h2 id="cambios-app">10. Cambios en la aplicación</h2>
+  <p>
+    Podemos modificar Cifrax (añadir, cambiar o retirar funciones) cuando haya un motivo válido:
+    mantener o mejorar la seguridad, adaptarnos a cambios de Android, de Google Play, de los
+    sitios web o de la ley, corregir errores, mejorar la app o porque una función deje de ser
+    técnica o legalmente viable.
+  </p>
+  <p>
+    Estos cambios no tendrán coste adicional para ti. Si un cambio te perjudica de forma
+    significativa, te avisaremos con antelación por un medio duradero (por ejemplo, en la app o
+    por Google Play) y podrás <strong>resolver el contrato sin coste</strong> en los 30 días
+    siguientes al aviso o al cambio, si es posterior. En ese caso te reembolsaremos la parte del
+    período pagado que quede sin usar.
+  </p>
+
+  <h2 id="fin">11. Fin del servicio</h2>
+  <p>
+    Podemos dejar de ofrecer Cifrax avisándote con al menos <strong>30 días de antelación</strong>.
+    Te reembolsaremos la parte del período ya pagado que no puedas usar. La app podrá dejar de
+    funcionar cuando termine el servicio.
+  </p>
+
+  <h2 id="responsabilidad">12. Garantía y responsabilidad</h2>
+  <p>
+    <strong>Garantía legal.</strong> Cifrax está cubierta por la garantía legal de conformidad de
+    los contenidos y servicios digitales. Si no funciona como se describe en estos términos y en la
+    ficha de Google Play, escríbenos: la pondremos en conformidad y, si no es posible, podrás
+    pedir una reducción del precio o resolver el contrato, en los términos que prevé la ley.
+  </p>
+  <p>
+    <strong>De qué respondemos.</strong> Respondemos de los daños que sean consecuencia directa de
+    un incumplimiento nuestro. <strong>No respondemos</strong> de los daños que se deban a:
+  </p>
+  <ul>
+    <li>el uso de la app contrario a estos términos o a la ley;</li>
+    <li>las webs, contenidos y servicios de terceros (apartado 8);</li>
+    <li>las limitaciones descritas en el apartado 3, que forman parte de la descripción del
+      servicio;</li>
+    <li>no haber instalado una actualización disponible (apartado 9), o usar dispositivos con root,
+      modificados o copias de la app ajenas a Google Play;</li>
+    <li>el olvido o la divulgación de tu PIN, o el borrado de datos que tú hayas activado o
+      solicitado;</li>
+    <li>causas de fuerza mayor o ajenas a nuestro control razonable, como caídas de Google,
+      cambios de Android o fallos de red.</li>
+  </ul>
+  <p>
+    <strong>Lo que estas limitaciones no excluyen.</strong> Nada de lo anterior limita nuestra
+    responsabilidad cuando la ley no lo permite: en caso de dolo o culpa grave, por daños a la
+    vida o a la salud, ni la responsabilidad por productos defectuosos. Tampoco limita los
+    derechos que la normativa de consumidores y usuarios te reconoce y que no pueden excluirse por
+    contrato.
+  </p>
+
+  <h2 id="licencia">13. Licencia y propiedad intelectual</h2>
+  <p>
+    Cifrax, su código, su diseño y su marca son de su titular. Mientras tu suscripción (o la
+    prueba) esté activa, te concedemos una <strong>licencia personal, no exclusiva e
+    intransferible</strong> para usar la app en tus dispositivos con fines privados. No puedes
+    copiar, modificar, redistribuir ni vender la app, ni crear o distribuir versiones manipuladas
+    o que eludan la suscripción, salvo en lo que la ley te permita expresamente.
+  </p>
+  <p>
+    Cifrax <strong>no elude ni desactiva medidas tecnológicas de protección</strong> (DRM) de
+    ningún contenido, y no está diseñada ni se promociona para obtener contenido protegido sin
+    autorización de sus titulares.
+  </p>
+
+  <h2 id="infracciones">14. Avisos de infracción de derechos (DMCA / UE)</h2>
+  <p>
+    Cifrax es una herramienta de navegación: <strong>no aloja, almacena ni distribuye contenido
+    de terceros</strong>, y los sitios que se visitan con ella se cargan directamente desde sus
+    servidores. Si eres titular de derechos y crees que Cifrax los infringe, escríbenos a
+    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a> indicando:
+  </p>
+  <ul>
+    <li>la obra protegida y el material presuntamente infractor;</li>
+    <li>tus datos de contacto (nombre, dirección postal y correo electrónico);</li>
+    <li>una declaración de buena fe de que el uso no está autorizado por el titular, su agente o
+      la ley;</li>
+    <li>una declaración, bajo tu responsabilidad, de que la información es exacta y de que eres el
+      titular o estás autorizado a actuar en su nombre.</li>
+  </ul>
+  <p>Atenderemos los avisos válidos con diligencia y conforme a la ley aplicable.</p>
+
+  <h2 id="cambios-terminos">15. Cambios en estos términos</h2>
+  <p>
+    Podemos actualizar estos términos cuando cambie la app, el servicio o la ley. La fecha de la
+    parte superior indica la última revisión. Si un cambio afecta a tus derechos o a tu
+    suscripción, te avisaremos con antelación razonable en la app o a través de Google Play, y
+    podrás cancelar antes de que se aplique. Si sigues usando Cifrax después de esa fecha, se
+    aplicarán los nuevos términos.
+  </p>
+
+  <h2 id="ley">16. Ley aplicable y reclamaciones</h2>
+  <p>
+    Estos términos se rigen por la <strong>legislación española</strong>, sin perjuicio de las
+    normas imperativas de protección de los consumidores del país donde residas. Si eres
+    consumidor, serán competentes los juzgados y tribunales de tu domicilio.
+  </p>
+  <p>
+    Si tienes un problema, escríbenos primero a
+    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>: intentaremos resolverlo de
+    forma amistosa en un plazo máximo de 30 días. También puedes presentar una reclamación ante
+    las autoridades de consumo de tu comunidad autónoma o de tu país.
+  </p>
+  <p>
+    Las partes podrán someterse, si ambas lo aceptan una vez surgida la controversia, al
+    <strong>arbitraje de consumo</strong> ante la Junta Arbitral de Consumo competente (Real
+    Decreto 231/2008). El arbitraje es voluntario y no te impide acudir a los tribunales.
+  </p>
+
+  <h2 id="varios">17. Otras disposiciones</h2>
+  <ul>
+    <li><strong>Nulidad parcial:</strong> si un tribunal o una autoridad declara nula o
+      inaplicable alguna parte de estos términos, el resto seguirá siendo válido.</li>
+    <li><strong>Cesión:</strong> podemos transmitir este contrato a una sociedad que constituyamos
+      o controlemos, o a quien adquiera Cifrax, siempre que se mantengan tus derechos; te lo
+      comunicaremos. Tú no puedes ceder tu suscripción a terceros.</li>
+    <li><strong>No renuncia:</strong> que no ejerzamos en un momento dado algún derecho previsto en
+      estos términos no significa que renunciemos a él.</li>
+    <li><strong>Idiomas:</strong> estos términos están disponibles en castellano y en catalán.
+      Puedes elegir la versión que prefieras; ambas tienen el mismo contenido.</li>
+  </ul>
+
+  <h2 id="contacto">18. Contacto</h2>
+  <p>
+    Para cualquier consulta o reclamación, escríbenos a
+    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>. También tienes esta dirección
+    dentro de la app, en Ajustes → Acerca de → «Contacto y reclamaciones».
+  </p>
+
+  <h2 id="anexo">Anexo. Formulario de desistimiento</h2>
+  <p>Solo tienes que rellenarlo y enviarlo si quieres desistir del contrato.</p>
+  <div class="anexo">
+    <p>
+      A la atención de David González Caballero (NIF 53836079W),
+      Noi del Sucre, 3, 5.º 1.ª, 08130 Santa Perpètua de Mogoda (Barcelona), España, cifrax.app@gmail.com:
+    </p>
+    <p>
+      Por la presente le comunico que desisto de mi contrato de suscripción a Cifrax
+      (<code>cifrax_monthly</code>).
+    </p>
+    <p>
+      — Contratado el: ______<br>
+      — Cuenta de Google con la que me suscribí: ______<br>
+      — Nombre del consumidor: ______<br>
+      — Domicilio del consumidor: ______<br>
+      — Firma (solo si se envía en papel): ______<br>
+      — Fecha: ______
+    </p>
+  </div>
 
   <footer>
     © 2026 Cifrax · <a href="privacy-policy.html">Política de Privacidad</a> ·

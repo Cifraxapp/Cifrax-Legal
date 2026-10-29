@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacitat — Cifrax</title>
+<style>
+  :root{
+    --bg:#0F0F12; --surface:#17171c; --text:#e8e8ea; --muted:#9a9aa2;
+    --gold:#C9A84C; --border:#26262e;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);color:var(--text);line-height:1.75;
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .container{max-width:760px;margin:0 auto;padding:48px 24px 80px}
+  header{border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:8px}
+  .logo{font-size:26px;font-weight:700;letter-spacing:2px}
+  .logo .x{color:var(--gold)}
+  h1{font-size:26px;margin:20px 0 4px;font-weight:700}
+  h2{font-size:18px;color:var(--gold);margin:34px 0 12px;font-weight:600}
+  h3{font-size:15px;color:var(--text);margin:22px 0 8px;font-weight:600}
+  p,li{color:var(--text);margin-bottom:12px}
+  ul{padding-left:22px;margin-bottom:16px}
+  li{margin-bottom:8px}
+  strong{color:#fff}
+  code{background:var(--surface);padding:1px 5px;border-radius:4px;font-size:13px}
+  .updated{color:var(--muted);font-size:14px;margin-top:6px}
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .lang{font-size:14px;color:var(--muted);margin:0 0 4px}
+  .back{display:inline-block;margin-bottom:8px;color:var(--muted);font-size:14px}
+  .callout{background:var(--surface);border-left:3px solid var(--gold);padding:16px 18px;margin:18px 0;border-radius:0 6px 6px 0}
+  .callout p:last-child{margin-bottom:0}
+  .tabla{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;display:block;overflow-x:auto}
+  .tabla th,.tabla td{border:1px solid var(--border);padding:9px 11px;text-align:left;vertical-align:top}
+  .tabla th{color:var(--gold);font-weight:600;white-space:nowrap}
+  .tabla code{font-size:12px}
+  .titular{background:var(--surface);border-left:3px solid var(--gold);padding:14px 18px;margin:12px 0 18px;border-radius:0 6px 6px 0}
+  .titular p{margin-bottom:4px}
+  footer{border-top:1px solid var(--border);margin-top:48px;padding-top:24px;color:var(--muted);font-size:14px}
+  @media(max-width:600px){.container{padding:32px 18px 60px}h1{font-size:22px}}
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">CIFRA<span class="x">X</span></div>
+  </header>
+
+  <a class="back" href="index.html">← Inici</a>
+  <p class="lang"><a href="privacy-policy.html" hreflang="es">Español</a> · <strong>Català</strong></p>
+  <h1>Política de Privacitat</h1>
+  <p class="updated">Darrera actualització: 29 d'octubre de 2026</p>
+
+  <h2>1. L'essencial</h2>
+  <p>
+    Cifrax és un navegador per a Android centrat en la privacitat. <strong>No tenim servidors
+    propis.</strong> No recollim dades personals, no hem integrat eines d'analítica ni de mesura,
+    no incloem publicitat ni rastrejadors, i no accedim a l'identificador de publicitat del
+    dispositiu. Res del que facis a Cifrax se'ns envia, perquè no hi ha cap lloc on enviar-ho. Les
+    úniques dades teves que podem arribar a rebre són les que tu decideixis enviar-nos per correu
+    electrònic.
+  </p>
+  <p>
+    Alguns components de Google que formen part de l'app sí que es comuniquen amb Google. El
+    component del traductor (ML Kit) envia a Google dades tècniques de diagnòstic i d'ús d'aquesta
+    funció —mai el text que tradueixes—. Les detallem a l'apartat 4. Aquestes dades van a Google,
+    no a nosaltres.
+  </p>
+  <p>
+    Aquesta política descriu amb precisió què es desa al teu dispositiu, quines connexions de xarxa
+    fa l'aplicació i quins serveis de tercers hi intervenen. Està redactada perquè es pugui
+    contrastar línia per línia amb el codi de l'app.
+  </p>
+
+  <h3>Responsable</h3>
+  <div class="titular">
+    <p><strong>Titular:</strong> David González Caballero</p>
+    <p><strong>NIF:</strong> 53836079W</p>
+    <p><strong>Domicili:</strong> Noi del Sucre, 3, 5è 1a, 08130 Santa Perpètua de Mogoda (Barcelona), Espanya</p>
+    <p><strong>Correu electrònic:</strong>
+      <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a></p>
+  </div>
+
+  <h2>2. Dades que es desen al teu dispositiu</h2>
+  <p>
+    Tota la teva configuració es desa <strong>únicament al dispositiu</strong>, xifrada amb
+    <strong>AES-256</strong> mitjançant <strong>Android Keystore</strong>. Aquesta informació no
+    surt mai del mòbil i nosaltres no hi tenim cap manera d'accedir-hi:
+  </p>
+  <ul>
+    <li>Els teus <strong>marcadors</strong>, amb el nom i la imatge que els hagis posat.</li>
+    <li>Els <strong>ajustos</strong> de privacitat, navegació, descàrregues i idioma.</li>
+    <li>Els <strong>PIN d'accés</strong>, desats sempre com a hash amb sal (mai en text llegible,
+      ni tan sols xifrat i reversible).</li>
+    <li>Les <strong>pestanyes obertes</strong>, només si has desactivat «Borrar al cerrar».</li>
+    <li>La data de la <strong>darrera comprovació de la teva subscripció</strong> (vegeu
+      l'apartat 6).</li>
+  </ul>
+  <p>
+    L'historial de navegació, les galetes i les dades dels llocs els gestiona el motor WebView del
+    sistema a l'emmagatzematge privat de l'app. Amb l'ajust «Borrar al cerrar» activat (valor per
+    defecte) s'eliminen en sortir.
+  </p>
+
+  <h2>3. Permisos de l'aplicació</h2>
+  <p>Cifrax declara aquests permisos del sistema i cap altre (a més d'un permís intern que Android
+    genera automàticament per a la mateixa app i que no dona accés a res fora d'ella). No demana
+    accés a contactes, ubicació, micròfon, càmera, trucades ni SMS.</p>
+
+  <table class="tabla">
+    <tr><th>Permís</th><th>Per a què s'utilitza</th></tr>
+    <tr>
+      <td><code>INTERNET</code></td>
+      <td>Carregar les pàgines web i descarregar el contingut que tu demanes. Sense aquest permís l'app no funciona.</td>
+    </tr>
+    <tr>
+      <td><code>ACCESS_NETWORK_STATE</code></td>
+      <td>Saber si hi ha connexió abans d'intentar una descàrrega o una comprovació.</td>
+    </tr>
+    <tr>
+      <td><code>USE_BIOMETRIC</code></td>
+      <td>Desbloquejar l'app amb la teva empremta. L'empremta la valida Android; l'app només rep un «sí» o un «no» i mai no veu les teves dades biomètriques.</td>
+    </tr>
+    <tr>
+      <td><code>USE_FINGERPRINT</code></td>
+      <td>El mateix ús que l'anterior, en versions antigues d'Android. L'afegeix automàticament la biblioteca d'empremta d'Android.</td>
+    </tr>
+    <tr>
+      <td><code>com.android.vending.BILLING</code></td>
+      <td>Gestionar la subscripció a través de Google Play.</td>
+    </tr>
+    <tr>
+      <td><code>FOREGROUND_SERVICE</code><br><code>FOREGROUND_SERVICE_DATA_SYNC</code></td>
+      <td>Mantenir activa la descàrrega quan surts de l'app o bloqueges la pantalla, perquè no es talli a mitges.</td>
+    </tr>
+    <tr>
+      <td><code>FOREGROUND_SERVICE_MEDIA_PLAYBACK</code></td>
+      <td>Continuar reproduint l'àudio amb la pantalla bloquejada. Només s'utilitza si actives la reproducció en segon pla, que ve desactivada.</td>
+    </tr>
+    <tr>
+      <td><code>POST_NOTIFICATIONS</code></td>
+      <td>Mostrar el progrés de les descàrregues i els controls de reproducció.</td>
+    </tr>
+    <tr>
+      <td><code>WAKE_LOCK</code></td>
+      <td>Evitar que el sistema adormi el procés enmig d'una descàrrega.</td>
+    </tr>
+    <tr>
+      <td><code>REQUEST_IGNORE_BATTERY_OPTIMIZATIONS</code></td>
+      <td>Poder demanar-te (mai concedir-se sol) una excepció d'estalvi de bateria, perquè alguns fabricants congelen les descàrregues en bloquejar la pantalla. Pots dir que no.</td>
+    </tr>
+    <tr>
+      <td><code>WRITE_EXTERNAL_STORAGE</code><br>(només Android 9 i anteriors)</td>
+      <td>Desar els fitxers descarregats. En versions modernes d'Android no se sol·licita.</td>
+    </tr>
+    <tr>
+      <td><code>READ_EXTERNAL_STORAGE</code><br>(només Android 12 i anteriors)</td>
+      <td>Llegir els fitxers que has descarregat amb l'app. En versions modernes d'Android no se sol·licita.</td>
+    </tr>
+  </table>
+
+  <p>
+    Per triar la imatge d'un marcador s'utilitza el <strong>selector de fotos del sistema</strong>,
+    que <strong>no requereix permís d'emmagatzematge</strong>: tu tries una imatge concreta i l'app
+    només rep aquesta. No té accés a la resta de la teva galeria.
+  </p>
+
+  <h2>4. Serveis de Google integrats</h2>
+  <p>
+    Cifrax integra quatre components de Google. Els gestiona Google i estan subjectes a la seva
+    <a href="https://policies.google.com/privacy?hl=ca" target="_blank" rel="noopener">Política de
+    Privadesa</a>. Això és exactament el que fa cadascun:
+  </p>
+
+  <h3>Google Play Billing — subscripció</h3>
+  <p>
+    Processa el pagament. La compra i el compte els gestiona Google: <strong>Cifrax no veu ni rep
+    les teves dades bancàries</strong>. L'app només consulta a Google si la teva subscripció està
+    activa i rep un sí o un no.
+  </p>
+
+  <h3>Google Play Integrity — antifrau</h3>
+  <p>
+    Verifica que l'app i el dispositiu no estiguin manipulats, per protegir-nos de còpies
+    modificades. Per emetre aquest veredicte, Google rep <strong>dades del dispositiu</strong> (un
+    certificat i un testimoni d'atestació generats per Google Play Services), <strong>dades de
+    l'app</strong> (nom del paquet, versió i certificat de signatura) i l'<strong>estat de la
+    llicència de Google Play</strong> dels comptes del dispositiu. Segons Google, només les
+    utilitza per verificar la integritat de l'app i del dispositiu, les xifra, no les cedeix a
+    tercers i les esborra després d'un període de conservació fix. Nosaltres no rebem ni
+    emmagatzemem cap d'aquestes dades: l'app només desa el veredicte (vàlid o no).
+  </p>
+
+  <h3>ML Kit — traductor de pàgines</h3>
+  <div class="callout">
+    <p>
+      <strong>La traducció es fa íntegrament dins del teu dispositiu.</strong> El text de les
+      pàgines que tradueixes <strong>no s'envia a Google ni a nosaltres</strong>: mai no surt del
+      mòbil.
+    </p>
+  </div>
+  <p>
+    El primer cop que tradueixes a un idioma, l'app descarrega de Google el model d'aquest idioma
+    (uns 30 MB). En aquesta descàrrega Google veu la teva adreça IP i quin idioma s'està
+    descarregant, com en qualsevol descàrrega d'un fitxer. A partir d'aquí el traductor funciona
+    sense connexió. La detecció de l'idioma de la pàgina també és local. Els models descarregats es
+    queden a l'emmagatzematge privat de l'app.
+  </p>
+  <p>
+    <strong>Dades de diagnòstic que ML Kit envia a Google.</strong> ML Kit, el component de Google
+    que fa la traducció i la detecció d'idioma, envia a Google informació tècnica per al diagnòstic
+    i l'anàlisi d'ús d'aquestes funcions:
+  </p>
+  <ul>
+    <li>dades del dispositiu (fabricant, model, versió del sistema) i de l'app (nom del paquet i
+      versió);</li>
+    <li>un <strong>identificador per instal·lació</strong> que, segons Google, no està pensat per
+      identificar-te a tu ni el teu dispositiu;</li>
+    <li>mètriques de rendiment (per exemple, el temps de resposta), la mida de l'entrada i de la
+      sortida, la versió de la funció, el tipus d'esdeveniment (inici, descàrrega de model,
+      traducció) i codis d'error;</li>
+    <li>els <strong>idiomes</strong> d'origen i de destinació configurats i l'idioma detectat.</li>
+  </ul>
+  <p>
+    <strong>No inclou el text de les pàgines ni la seva traducció, ni les adreces que
+    visites.</strong> Segons Google, aquestes dades viatgen xifrades (HTTPS) i no se cedeixen a
+    tercers. Van a Google, no a nosaltres, i no les podem consultar. Font:
+    <a href="https://developers.google.com/ml-kit/android-data-disclosure" target="_blank"
+    rel="noopener">divulgació de dades d'ML Kit</a>.
+  </p>
+
+  <h3>In-App Review — valoracions</h3>
+  <p>
+    Si toques «Valora la app» als ajustos, Google mostra el seu propi diàleg de valoració. La nota
+    i el comentari van directament a Google Play: <strong>Cifrax no els veu mai</strong>, ni tan
+    sols sap si has arribat a valorar.
+  </p>
+
+  <h2>5. Connexions de xarxa i DNS</h2>
+  <p>
+    És important distingir dues coses: la navegació, que és cosa teva, i les connexions que fa la
+    mateixa aplicació.
+  </p>
+
+  <h3>Quan navegues</h3>
+  <p>
+    En obrir un web, el teu dispositiu es connecta a aquest web i als recursos que carregui (els que
+    el bloquejador no talli abans). Això és el que fa qualsevol navegador i no implica cap recollida
+    de dades per part nostra: no veiem ni registrem les pàgines que visites.
+  </p>
+  <p>
+    La resolució de noms de domini de la navegació la fa <strong>el sistema Android</strong>, amb el
+    DNS que tinguis configurat —normalment el del teu operador o el de la teva xarxa wifi, que pot
+    veure i registrar els dominis que consultes—. Això passa en tots els navegadors. Si també vols
+    xifrar aquest trànsit, Android inclou el <strong>«DNS privat»</strong> a nivell de sistema; als
+    ajustos de privacitat de Cifrax hi ha un accés directe a aquesta opció d'Android amb
+    instruccions.
+  </p>
+
+  <h3>«DNS cifrat (DoH)»: què cobreix exactament</h3>
+  <div class="callout">
+    <p>
+      L'ajust <strong>«DNS cifrado (DoH)»</strong> de Cifrax s'aplica a <strong>les connexions
+      pròpies de l'aplicació</strong> —en concret, a la descàrrega de les llistes de filtres del
+      bloquejador—, <strong>no a la teva navegació</strong>. Preferim dir-ho clarament que no pas
+      deixar que s'entengui de més.
+    </p>
+  </div>
+  <p>
+    Amb aquest ajust activat (ve activat), aquestes peticions resolen els noms contra
+    <strong>Cloudflare (1.1.1.1)</strong> mitjançant DNS-over-HTTPS. Aleshores Cloudflare només veu
+    els dominis dels proveïdors de llistes de filtres —sempre els mateixos, els d'EasyList, AdGuard,
+    uBlock Origin i similars— i la teva adreça IP. <strong>No veu cap domini de la teva
+    navegació</strong>, perquè la navegació no hi passa. Si la consulta falla, es recorre al DNS del
+    sistema.
+  </p>
+  <p>
+    El pots <strong>desactivar quan vulguis</strong> als ajustos de privacitat de Cifrax («DNS
+    cifrado (DoH)»); aleshores aquestes descàrregues utilitzaran el DNS del sistema.
+  </p>
+  <p>
+    Els components de Google descrits a l'apartat 4 (Play Billing, Play Integrity, ML Kit i In-App
+    Review) es connecten als servidors de Google amb la seva pròpia resolució de noms; l'ajust DoH
+    no s'hi aplica.
+  </p>
+
+  <h3>Altres connexions de l'aplicació</h3>
+  <ul>
+    <li><strong>Llistes de filtres:</strong> cada 24 h es descarreguen dels seus proveïdors públics
+      (easylist.to, filters.adtidy.org, secure.fanboy.co.nz, pgl.yoyo.org i GitHub). Només es
+      descarreguen fitxers; no se'ls envia cap informació sobre tu ni sobre la teva
+      navegació.</li>
+    <li><strong>Descàrregues:</strong> quan descarregues un fitxer, l'app es connecta directament
+      al servidor d'aquest fitxer. Res no passa per cap servidor nostre.</li>
+    <li><strong>Bloquejador d'anuncis:</strong> funciona <strong>íntegrament al
+      dispositiu</strong>. Cap adreça que visites es consulta contra un servei extern per decidir
+      si es bloqueja.</li>
+  </ul>
+
+  <h2>6. Subscripció</h2>
+  <p>
+    La teva subscripció està associada al <strong>teu compte de Google</strong>, no a aquesta
+    instal·lació de l'app. Cifrax consulta a Google Play si està activa en obrir-se i en tornar a
+    primer pla.
+  </p>
+  <p>
+    Al dispositiu només es desa la <strong>data de la darrera comprovació amb resultat
+    positiu</strong>, i serveix exclusivament perquè l'app continuï funcionant durant un període
+    breu sense connexió. No conté dades de pagament ni identifica el teu compte.
+  </p>
+  <p>
+    Pots <strong>gestionar o cancel·lar la subscripció en qualsevol moment</strong> des de
+    <a href="https://play.google.com/store/account/subscriptions" target="_blank" rel="noopener">Google
+    Play → Subscripcions</a>. Tingues en compte que <strong>desinstal·lar l'app no cancel·la la
+    subscripció</strong>: cal cancel·lar-la a Google Play. De la mateixa manera, si reinstal·les
+    l'app o canvies de dispositiu, la subscripció es recupera en iniciar sessió amb el mateix compte
+    de Google.
+  </p>
+
+  <h2>7. Edat mínima</h2>
+  <p>
+    Cifrax està destinada exclusivament a persones <strong>majors de 18 anys</strong>. No està
+    adreçada a menors i no recull intencionadament dades de menors.
+  </p>
+
+  <h2>8. Comunicació de dades</h2>
+  <p>
+    <strong>No compartim, venem ni cedim dades a tercers.</strong> Llevat dels correus que ens
+    enviïs, no rebem dades personals teves, de manera que no hi ha res a compartir. Les úniques
+    transmissions existents són les descrites als apartats 4 i 5, i es produeixen entre el teu
+    dispositiu i Google, Cloudflare o els proveïdors de llistes, mai a través nostre.
+  </p>
+
+  <h2>9. Finalitats i base legal</h2>
+  <p>
+    Tot i que nosaltres no rebem dades del teu ús de l'app, el Reglament general de protecció de
+    dades (RGPD) ens obliga a explicar-te per què intervenen els tractaments descrits més amunt:
+  </p>
+  <ul>
+    <li><strong>Subscripció (Google Play Billing):</strong> comprovar si tens accés de pagament.
+      Base legal: l'execució del contracte de subscripció (art. 6.1.b RGPD).</li>
+    <li><strong>Antifrau (Google Play Integrity):</strong> protegir l'app de còpies manipulades i
+      usos fraudulents. Base legal: el nostre interès legítim en la seguretat del servei
+      (art. 6.1.f RGPD).</li>
+    <li><strong>Traductor (ML Kit):</strong> que la funció de traducció funcioni, i que Google rebi
+      les dades tècniques de diagnòstic descrites a l'apartat 4. Base legal: interès legítim a
+      oferir i mantenir aquesta funció (art. 6.1.f RGPD).</li>
+    <li><strong>Descàrrega de llistes de filtres (DoH amb Cloudflare):</strong> mantenir actualitzat
+      el bloquejador. Cloudflare només veu la teva adreça IP i els dominis dels proveïdors de
+      llistes. Base legal: interès legítim a prestar el bloqueig d'anuncis (art. 6.1.f RGPD). El
+      pots desactivar als ajustos.</li>
+    <li><strong>Correus que ens enviïs:</strong> respondre la teva consulta o reclamació. Base
+      legal: la teva sol·licitud i el nostre interès legítim a atendre-la (art. 6.1.b i 6.1.f
+      RGPD). Conservem aquests correus només el temps necessari per resoldre la consulta i atendre
+      possibles reclamacions derivades.</li>
+  </ul>
+
+  <h2>10. Transferències fora de la Unió Europea</h2>
+  <p>
+    Google i Cloudflare tenen la seu als Estats Units, de manera que les dades tècniques que reben
+    (apartats 4 i 5) es poden tractar fora de l'Espai Econòmic Europeu. Totes dues empreses
+    declaren estar adherides al <strong>Marc de privacitat de dades UE-EUA</strong> i utilitzen les
+    clàusules contractuals tipus aprovades per la Comissió Europea com a garantia addicional.
+  </p>
+
+  <h2>11. Els teus drets</h2>
+  <p>
+    Pots exercir els teus drets d'<strong>accés, rectificació, supressió, oposició, limitació del
+    tractament i portabilitat</strong> escrivint-nos a
+    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>. Tingues en compte que nosaltres
+    no desem dades del teu ús de l'app: el que hi ha al teu dispositiu ho pots esborrar tu mateix
+    (apartat 12), i les dades tècniques que reben Google o Cloudflare les gestionen ells, de manera
+    que les sol·licituds sobre aquestes dades també les has d'adreçar a ells.
+  </p>
+  <p>
+    Si consideres que no hem atès correctament els teus drets, pots presentar una reclamació davant
+    l'<strong>Agència Espanyola de Protecció de Dades</strong>
+    (<a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>) o davant
+    l'autoritat de protecció de dades del teu país.
+  </p>
+
+  <h2>12. Eliminació de dades</h2>
+  <p>
+    Com que tot es desa localment, tens dues vies i totes dues són immediates:
+  </p>
+  <ul>
+    <li><strong>Esborrar les dades</strong> des dels ajustos d'Android → Aplicacions → Cifrax:
+      elimina la configuració, els marcadors, els PIN, les pestanyes i els models de traducció
+      descarregats.</li>
+    <li><strong>Desinstal·lar l'app</strong>: elimina tot l'anterior. Els fitxers que hagis
+      descarregat a la carpeta pública de descàrregues es conserven, perquè són teus.</li>
+  </ul>
+  <p>
+    No cal que ens escriguis per esborrar les dades de l'app: nosaltres no en tenim cap. Si ens has
+    escrit i vols que esborrem els teus correus, demana-ho. Recorda que esborrar les dades de l'app
+    <strong>no cancel·la la subscripció</strong> (apartat 6).
+  </p>
+
+  <h2>13. Canvis en aquesta política</h2>
+  <p>
+    Podem actualitzar aquesta política quan canviï el funcionament de l'app. La data de la part
+    superior reflecteix la darrera revisió, i els canvis rellevants es reflectiran en aquesta
+    mateixa pàgina.
+  </p>
+
+  <h2>14. Contacte</h2>
+  <p>
+    Per a qualsevol dubte sobre privacitat, escriu-nos a
+    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>. També tens aquesta adreça dins
+    de l'app, a «Ajustes» → «Acerca de» → «Contacto y reclamaciones».
+  </p>
+
+  <footer>
+    © 2026 Cifrax · <a href="terms-of-service-ca.html">Condicions del Servei</a> ·
+    <a href="mailto:cifrax.app@gmail.com">cifrax.app@gmail.com</a>
+  </footer>
+</div>
+</body>
+</html>
