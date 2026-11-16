@@ -53,7 +53,7 @@
   <a class="back" href="index.html">← Inicio</a>
   <p class="lang"><strong>Español</strong> · <a href="privacy-policy-ca.html" hreflang="ca">Català</a></p>
   <h1>Política de Privacidad</h1>
-  <p class="updated">Última actualización: 29 de octubre de 2026</p>
+  <p class="updated">Última actualización: 16 de noviembre de 2026</p>
 
   <h2>1. Lo esencial</h2>
   <p>
@@ -67,7 +67,7 @@
   <p>
     Algunos componentes de Google que forman parte de la app sí se comunican con Google. El
     componente del traductor (ML Kit) envía a Google datos técnicos de diagnóstico y de uso de
-    esa función —nunca el texto que traduces—. Los detallamos en el apartado 4. Esos datos van a
+    esa función —nunca el texto que traduces—. Solo se pone en marcha si usas el traductor. Los detallamos en el apartado 4. Esos datos van a
     Google, no a nosotros.
   </p>
   <p>
@@ -103,6 +103,17 @@
     El historial de navegación, las cookies y los datos de los sitios los gestiona el motor
     WebView del sistema en el almacenamiento privado de la app. Con el ajuste «Borrar al cerrar»
     activado (valor por defecto) se eliminan al salir.
+  </p>
+  <p>
+    <strong>Cookies de terceros bloqueadas.</strong> Desde la versión 2.7.0, Cifrax no acepta por
+    defecto las cookies de terceros: las que pone en una web un dominio distinto del que visitas, y
+    que se usan sobre todo para seguirte de un sitio a otro. Si un vídeo incrustado o un inicio de
+    sesión no funciona, puedes permitirlas en Ajustes con «Permitir cookies de terceros».
+  </p>
+  <p>
+    <strong>Teclado.</strong> En los campos de las páginas web, Cifrax pide al teclado que no aprenda
+    ni guarde lo que escribes (la misma señal que usa el modo incógnito). La mayoría de teclados la
+    respetan, pero depende del teclado que tengas instalado.
   </p>
 
   <h2>3. Permisos de la aplicación</h2>
@@ -170,7 +181,7 @@
 
   <h2>4. Servicios de Google integrados</h2>
   <p>
-    Cifrax integra cuatro componentes de Google. Los gestiona Google y están sujetos a su
+    Cifrax integra cuatro componentes de Google y usa el motor web de Android (WebView), también de Google. Los gestiona Google y están sujetos a su
     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de
     Privacidad</a>. Esto es exactamente lo que hace cada uno:
   </p>
@@ -180,6 +191,13 @@
     Procesa el pago. La compra y la cuenta las gestiona Google: <strong>Cifrax no ve ni recibe tus
     datos bancarios</strong>. La app solo consulta a Google si tu suscripción está activa y recibe
     un sí o un no.
+  </p>
+
+  <p>
+    Como parte de su funcionamiento, la librería de pagos de Google puede enviar a Google datos
+    técnicos (por ejemplo, la versión de la app y del dispositivo, y errores del proceso de compra)
+    para que el pago funcione y para diagnóstico. No incluye las páginas que visitas. Esos datos van
+    a Google, no a nosotros.
   </p>
 
   <h3>Google Play Integrity — antifraude</h3>
@@ -210,7 +228,9 @@
     quedan en el almacenamiento privado de la app.
   </p>
   <p>
-    <strong>Datos de diagnóstico que ML Kit envía a Google.</strong> ML Kit, el componente de
+    <strong>Datos de diagnóstico que ML Kit envía a Google.</strong> Desde la versión 2.7.0, ML Kit
+    solo se pone en marcha cuando usas el traductor (con «Ofrecer traducir automáticamente» activado o al pulsar
+    «Traducir página»); si no lo usas, no envía nada. Cuando se usa, ML Kit, el componente de
     Google que hace la traducción y la detección de idioma, envía a Google información técnica
     para diagnóstico y análisis de uso de esas funciones:
   </p>
@@ -239,6 +259,21 @@
     sabe si llegaste a valorar.
   </p>
 
+  <h3>Motor web del sistema (WebView)</h3>
+  <p>
+    Las páginas se muestran con Android System WebView, el motor web que Google instala y actualiza
+    en Android. Cifrax le indica que <strong>no envíe a Google sus estadísticas de uso y de
+    fallos</strong> desde esta app.
+  </p>
+  <p>
+    <strong>Protección contra webs peligrosas (Google Safe Browsing).</strong> WebView incluye Safe
+    Browsing, el servicio de Google que avisa antes de abrir webs de phishing o malware, y funciona a
+    través de Google Play Services. La comprobación se hace contra una lista guardada en el
+    dispositivo y, solo cuando hay una coincidencia parcial, se consulta a Google un fragmento
+    cifrado (hash parcial) de la dirección, no la dirección completa. Lo mantenemos activado porque
+    te protege.
+  </p>
+
   <h2>5. Conexiones de red y DNS</h2>
   <p>
     Es importante distinguir dos cosas: la navegación, que es cosa tuya, y las conexiones que hace
@@ -258,6 +293,19 @@
     navegadores. Si quieres cifrar también ese tráfico, Android incluye <strong>«DNS
     privado»</strong> a nivel de sistema; en Ajustes → Privacidad de Cifrax hay un acceso directo
     a esa opción de Android con instrucciones.
+  </p>
+
+  <p>
+    <strong>Webs sin cifrar y certificados.</strong> Si una web no admite HTTPS, Cifrax te avisa
+    antes de abrirla y solo la carga si pulsas «Continuar». Si el certificado de una web pública no
+    es válido, Cifrax la bloquea. Con los dispositivos de tu propia red (routers, impresoras) que
+    usan certificados propios, te avisa y te deja continuar si reconoces el dispositivo; esa
+    excepción vale solo para ese dispositivo.
+  </p>
+  <p>
+    <strong>Archivos que subes.</strong> Cuando una web te pide un archivo, Cifrax abre el selector
+    de Android: tú eliges el archivo y solo ese se entrega a la web. Cifrax no lo guarda ni lo
+    envía a ningún otro sitio.
   </p>
 
   <h3>«DNS cifrado (DoH)» — qué cubre exactamente</h3>
@@ -296,7 +344,10 @@
       servidor de ese archivo. Nada pasa por ningún servidor nuestro.</li>
     <li><strong>Bloqueador de anuncios:</strong> funciona <strong>íntegramente en el
       dispositivo</strong>. Ninguna dirección que visitas se consulta contra un servicio externo
-      para decidir si se bloquea.</li>
+      para decidir si se bloquea. También filtra las peticiones que las webs hacen en segundo plano
+      (service workers).</li>
+    <li><strong>Conexiones propias siempre cifradas:</strong> las conexiones que la app hace por su
+      cuenta, como la descarga de las listas de filtros, usan siempre HTTPS.</li>
   </ul>
 
   <h2>6. Suscripción</h2>
