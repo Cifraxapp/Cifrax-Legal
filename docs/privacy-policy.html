@@ -53,7 +53,7 @@
   <a class="back" href="index.html">← Inicio</a>
   <p class="lang"><strong>Español</strong> · <a href="privacy-policy-ca.html" hreflang="ca">Català</a></p>
   <h1>Política de Privacidad</h1>
-  <p class="updated">Última actualización: 16 de noviembre de 2026</p>
+  <p class="updated">Última actualización: 17 de noviembre de 2026</p>
 
   <h2>1. Lo esencial</h2>
   <p>
@@ -65,10 +65,12 @@
     recibir son los que tú decidas mandarnos por correo electrónico.
   </p>
   <p>
-    Algunos componentes de Google que forman parte de la app sí se comunican con Google. El
-    componente del traductor (ML Kit) envía a Google datos técnicos de diagnóstico y de uso de
-    esa función —nunca el texto que traduces—. Solo se pone en marcha si usas el traductor. Los detallamos en el apartado 4. Esos datos van a
-    Google, no a nosotros.
+    Algunos componentes de Google que forman parte de la app sí se comunican con Google. La
+    librería de pagos de Google Play envía a Google datos técnicos de diagnóstico cuando la app
+    comprueba tu suscripción. El componente del traductor (ML Kit) envía a Google datos técnicos
+    de diagnóstico y de uso de esa función —nunca el texto que traduces—, y solo se pone en marcha
+    si usas el traductor. Los detallamos en el apartado 4. Esos datos van a Google, no a
+    nosotros.
   </p>
   <p>
     Esta política describe con precisión qué se guarda en tu dispositivo, qué conexiones de red
@@ -95,14 +97,17 @@
     <li>Tus <strong>marcadores</strong>, con el nombre y la imagen que les hayas puesto.</li>
     <li>Los <strong>ajustes</strong> de privacidad, navegación, descargas e idioma.</li>
     <li>Los <strong>PIN de acceso</strong>, guardados siempre como hash con sal (nunca en texto
-      legible, ni siquiera cifrado y reversible).</li>
-    <li>Las <strong>pestañas abiertas</strong>, solo si has desactivado «Borrar al cerrar».</li>
+      legible, ni siquiera cifrado y reversible). El PIN es opcional: puedes quitarlo cuando
+      quieras en Ajustes → Seguridad → «Quitar PIN» (o «Quitar bloqueo», si usas la huella). Al
+      quitarlo se borran los PIN guardados; tus marcadores y tus ajustes se conservan.</li>
+    <li>Las <strong>pestañas abiertas</strong>, solo si has desactivado «Borrar datos al cerrar la
+      app».</li>
     <li>La fecha de la <strong>última comprobación de tu suscripción</strong> (ver apartado 6).</li>
   </ul>
   <p>
     El historial de navegación, las cookies y los datos de los sitios los gestiona el motor
-    WebView del sistema en el almacenamiento privado de la app. Con el ajuste «Borrar al cerrar»
-    activado (valor por defecto) se eliminan al salir.
+    WebView del sistema en el almacenamiento privado de la app. Con el ajuste «Borrar datos al
+    cerrar la app» activado (valor por defecto) se eliminan al salir.
   </p>
   <p>
     <strong>Cookies de terceros bloqueadas.</strong> Desde la versión 2.7.0, Cifrax no acepta por
@@ -194,10 +199,26 @@
   </p>
 
   <p>
-    Como parte de su funcionamiento, la librería de pagos de Google puede enviar a Google datos
-    técnicos (por ejemplo, la versión de la app y del dispositivo, y errores del proceso de compra)
-    para que el pago funcione y para diagnóstico. No incluye las páginas que visitas. Esos datos van
-    a Google, no a nosotros.
+    Como parte de su funcionamiento, la librería de pagos de Google envía a Google datos técnicos
+    para que el pago funcione y para diagnóstico. Puede hacerlo cada vez que la app comprueba tu
+    suscripción, es decir, al abrirse y al volver a primer plano. Son estos:
+  </p>
+  <ul>
+    <li>la versión de la librería y de la app, y el nombre del paquete de la app;</li>
+    <li>el fabricante, la marca y el modelo del dispositivo (con los nombres técnicos de su
+      hardware), la versión de Android con el identificador de su compilación, y la memoria total
+      del dispositivo;</li>
+    <li>el resultado de las operaciones con la tienda —por ejemplo, los errores del proceso de
+      compra, con su código y su mensaje— y cuánto tardan;</li>
+    <li>un número aleatorio que la librería genera al ponerse en marcha y que no se guarda: cambia
+      cada vez que la app se inicia de cero;</li>
+    <li>los datos que añade el canal por el que Google los envía: el país y el idioma de la
+      configuración regional, el código del operador de tu tarjeta SIM, el tipo de red (wifi o
+      datos móviles y, en ese caso, la tecnología, como 4G o 5G) y la zona horaria.</li>
+  </ul>
+  <p>
+    <strong>No incluye las páginas que visitas</strong> ni nada de tu navegación. Esos datos van a
+    Google, no a nosotros, y no podemos consultarlos.
   </p>
 
   <h3>Google Play Integrity — antifraude</h3>
@@ -338,7 +359,8 @@
   <h3>Otras conexiones de la aplicación</h3>
   <ul>
     <li><strong>Listas de filtros:</strong> cada 24 h se descargan de sus proveedores públicos
-      (easylist.to, filters.adtidy.org, secure.fanboy.co.nz, pgl.yoyo.org y GitHub). Solo se
+      (easylist.to, easylist-downloads.adblockplus.org, secure.fanboy.co.nz, pgl.yoyo.org, GitHub
+      y su espejo cdn.jsdelivr.net). Solo se
       descargan archivos; no se les envía información sobre ti ni sobre tu navegación.</li>
     <li><strong>Descargas:</strong> cuando descargas un archivo, la app se conecta directamente al
       servidor de ese archivo. Nada pasa por ningún servidor nuestro.</li>

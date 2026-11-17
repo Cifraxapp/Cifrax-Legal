@@ -53,7 +53,7 @@
   <a class="back" href="index.html">← Inici</a>
   <p class="lang"><a href="privacy-policy.html" hreflang="es">Español</a> · <strong>Català</strong></p>
   <h1>Política de Privacitat</h1>
-  <p class="updated">Darrera actualització: 16 de novembre de 2026</p>
+  <p class="updated">Darrera actualització: 17 de novembre de 2026</p>
 
   <h2>1. L'essencial</h2>
   <p>
@@ -65,10 +65,12 @@
     electrònic.
   </p>
   <p>
-    Alguns components de Google que formen part de l'app sí que es comuniquen amb Google. El
-    component del traductor (ML Kit) envia a Google dades tècniques de diagnòstic i d'ús d'aquesta
-    funció —mai el text que tradueixes—. Només s'activa si fas servir el traductor. Les detallem a l'apartat 4. Aquestes dades van a Google,
-    no a nosaltres.
+    Alguns components de Google que formen part de l'app sí que es comuniquen amb Google. La
+    biblioteca de pagaments de Google Play envia a Google dades tècniques de diagnòstic quan l'app
+    comprova la teva subscripció. El component del traductor (ML Kit) envia a Google dades
+    tècniques de diagnòstic i d'ús d'aquesta funció —mai el text que tradueixes—, i només s'activa
+    si fas servir el traductor. Les detallem a l'apartat 4. Aquestes dades van a Google, no a
+    nosaltres.
   </p>
   <p>
     Aquesta política descriu amb precisió què es desa al teu dispositiu, quines connexions de xarxa
@@ -95,15 +97,19 @@
     <li>Els teus <strong>marcadors</strong>, amb el nom i la imatge que els hagis posat.</li>
     <li>Els <strong>ajustos</strong> de privacitat, navegació, descàrregues i idioma.</li>
     <li>Els <strong>PIN d'accés</strong>, desats sempre com a hash amb sal (mai en text llegible,
-      ni tan sols xifrat i reversible).</li>
-    <li>Les <strong>pestanyes obertes</strong>, només si has desactivat «Borrar al cerrar».</li>
+      ni tan sols xifrat i reversible). El PIN és opcional: el pots treure quan vulguis als
+      ajustos de seguretat de Cifrax, amb «Quitar PIN» (o «Quitar bloqueo», si fas servir
+      l'empremta). En treure'l s'esborren els PIN desats; els teus marcadors i els teus ajustos es
+      conserven.</li>
+    <li>Les <strong>pestanyes obertes</strong>, només si has desactivat «Borrar datos al cerrar la
+      app».</li>
     <li>La data de la <strong>darrera comprovació de la teva subscripció</strong> (vegeu
       l'apartat 6).</li>
   </ul>
   <p>
     L'historial de navegació, les galetes i les dades dels llocs els gestiona el motor WebView del
-    sistema a l'emmagatzematge privat de l'app. Amb l'ajust «Borrar al cerrar» activat (valor per
-    defecte) s'eliminen en sortir.
+    sistema a l'emmagatzematge privat de l'app. Amb l'ajust «Borrar datos al cerrar la app» activat
+    (valor per defecte) s'eliminen en sortir.
   </p>
   <p>
     <strong>Galetes de tercers bloquejades.</strong> Des de la versió 2.7.0, Cifrax no accepta per
@@ -195,10 +201,26 @@
   </p>
 
   <p>
-    Com a part del seu funcionament, la biblioteca de pagaments de Google pot enviar a Google dades
-    tècniques (per exemple, la versió de l'app i del dispositiu, i errors del procés de compra) perquè
-    el pagament funcioni i per a diagnòstic. No inclou les pàgines que visites. Aquestes dades van a
-    Google, no a nosaltres.
+    Com a part del seu funcionament, la biblioteca de pagaments de Google envia a Google dades
+    tècniques perquè el pagament funcioni i per a diagnòstic. Ho pot fer cada vegada que l'app
+    comprova la teva subscripció, és a dir, en obrir-se i en tornar a primer pla. Són aquestes:
+  </p>
+  <ul>
+    <li>la versió de la biblioteca i de l'app, i el nom del paquet de l'app;</li>
+    <li>el fabricant, la marca i el model del dispositiu (amb els noms tècnics del seu maquinari),
+      la versió d'Android amb l'identificador de la seva compilació, i la memòria total del
+      dispositiu;</li>
+    <li>el resultat de les operacions amb la botiga —per exemple, els errors del procés de compra,
+      amb el seu codi i el seu missatge— i quant triguen;</li>
+    <li>un nombre aleatori que la biblioteca genera en posar-se en marxa i que no es desa: canvia
+      cada vegada que l'app s'inicia de zero;</li>
+    <li>les dades que afegeix el canal pel qual Google les envia: el país i l'idioma de la
+      configuració regional, el codi de l'operador de la teva targeta SIM, el tipus de xarxa (wifi o
+      dades mòbils i, en aquest cas, la tecnologia, com ara 4G o 5G) i la zona horària.</li>
+  </ul>
+  <p>
+    <strong>No inclou les pàgines que visites</strong> ni res de la teva navegació. Aquestes dades
+    van a Google, no a nosaltres, i no les podem consultar.
   </p>
 
   <h3>Google Play Integrity — antifrau</h3>
@@ -339,7 +361,8 @@
   <h3>Altres connexions de l'aplicació</h3>
   <ul>
     <li><strong>Llistes de filtres:</strong> cada 24 h es descarreguen dels seus proveïdors públics
-      (easylist.to, filters.adtidy.org, secure.fanboy.co.nz, pgl.yoyo.org i GitHub). Només es
+      (easylist.to, easylist-downloads.adblockplus.org, secure.fanboy.co.nz, pgl.yoyo.org, GitHub
+      i el seu mirall cdn.jsdelivr.net). Només es
       descarreguen fitxers; no se'ls envia cap informació sobre tu ni sobre la teva
       navegació.</li>
     <li><strong>Descàrregues:</strong> quan descarregues un fitxer, l'app es connecta directament
